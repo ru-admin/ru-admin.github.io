@@ -1,9 +1,8 @@
 ---
 title: "CI/CD с GitLab + Kubernetes: деплой за 10 минут"
-description: Introduction to Sample Post
+description: "Автоматизация CI/CD: от 2 часов до 10 минут деплоя"
 hero: "hero.webp"
-categories: ["ci-cd", "kubernetes"]
-tags: ["gitlab", "kubernetes", "docker", "flux-cd", "helm"]
+tags: ["gitlab", "kubernetes", "docker", "fluxcd", "helm"]
 menu:
   sidebar:
     name: "CI/CD в k8s"
