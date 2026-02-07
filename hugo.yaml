@@ -56,6 +56,12 @@ params:
       enable: false
       
   features:
+    analytics:
+      enable: true
+      services:
+        google:
+          id: G-DLMBEV3BLT
+
     theme:
       enable: true
       services:
