@@ -1,0 +1,32 @@
+{{ $sectionID := replace (lower .section.name) " " "-"  }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container anchor p-lg-5 about-section" id="{{ $sectionID }}">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8 offset-lg-2">
+      {{ if .title }}
+      <h1 class="mb-4">{{ .title }}</h1>
+      {{ end }}
+      
+      {{ if .content }}
+      <div class="content mb-4">
+        {{ .content | markdownify }}
+      </div>
+      {{ end }}
+      
+      {{ if .buttons }}
+      <div class="buttons d-flex flex-wrap gap-3">
+        {{ range .buttons }}
+        <a href="{{ .url }}" 
+           {{ if .external }}target="_blank" rel="noopener"{{ end }}
+           class="btn btn-{{ .style | default "primary" }}">
+          {{ .text }}
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+section:
+  name: Технологический стек
+  id: stacks
+  enable: true
+  weight: 3
+  showOnNavbar: false
+  template: sections/stacks.html
+
+skills:
+- name: Контейнеризация и оркестрация
+  summary: |
+    ![Docker](icons/docker-original.svg) Docker
+    
+    ![Podman](icons/podman-original.svg) Podman
+    
+    ![Kubernetes](icons/kubernetes-plain.svg) Kubernetes
+    
+    ![Helm](icons/helm-original.svg) Helm
+
+- name: CI/CD
+  summary: |
+    ![GitLab](icons/gitlab-original.svg) GitLab
+    
+    ![GitHub](icons/github-original.svg) GitHub Actions
+    
+    ![Forgejo](icons/forgejo-original.svg) Forgejo & Gitea
+
+- name: Infrastructure as Code
+  summary: |
+    ![Terraform](icons/terraform-original.svg) Terraform
+    
+    ![Ansible](icons/ansible-original.svg) Ansible
+
+- name: Облачные платформы
+  summary: |
+    ![Yandex](icons/yandex.png) Yandex Cloud • 
+    
+    ![Selectel](icons/selectel.ico) Selectel
+    
+    ![AWS](icons/aws.svg) AWS
+    
+    ![GCP](icons/gcp.png) GCP
+
+- name: Мониторинг
+  summary: |
+    ![Prometheus](icons/prometheus-original.svg) Prometheus
+    
+    ![Grafana](icons/grafana-original.svg) Grafana
+    
+    ![Zabbix](icons/zabbix.png) Zabbix
+
+- name: Операционные системы
+  summary: |
+    ![Linux](icons/linux-original.svg) Linux
+    
+    ![Ubuntu](icons/ubuntu-original.svg) Ubuntu
+    
+    ![Windows](icons/windows8-original.svg) Windows
+

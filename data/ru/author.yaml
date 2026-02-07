@@ -1,0 +1,19 @@
+name: "DevOps-инженер и CloudAdmin"
+# nickname: "John"
+greeting: ">25-лет опыта: от железа до облаков → "
+image: "/icons/cloudadmin_avatar.webp"
+contactInfo:
+  telegram: "devops_cloudadmin_bot"
+  github: ru-admin
+  fl: "devops4u"
+  # email: "johndoe@example.com"
+  # phone: "+0123456789"
+  # linkedin: johndoe
+  # telegram: "@devops_cloudadmin_bot"
+
+summary:
+  - Автоматизирую инфраструктуру
+  - Настраиваю CI/CD
+  - Мигрирую в российские облака
+  - Внедряю мониторинг
+  - Оптимизирую затраты на инфраструктуру

@@ -1,0 +1,33 @@
+<div class="col-xs-12 col-sm-6 col-lg-4 pt-3">
+  <div class="card h-100">
+    <div class="card-body" style="padding-top: 0.8rem; padding-bottom: 0.8rem;">
+      <h4 class="card-title mb-3">{{ .name }}</h4>
+      <div class="card-text stack-icons">
+        {{ .summary | markdownify }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.stack-icons img {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.stack-icons p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.stack-icons p:last-child {
+  margin-bottom: 0;
+}
+</style>

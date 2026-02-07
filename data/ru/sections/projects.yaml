@@ -1,0 +1,67 @@
+section:
+  name: Избранные кейсы
+  id: projects
+  enable: true
+  weight: 4
+  showOnNavbar: false
+  # hideTitle: true
+
+buttons:
+- name: All
+  filter: "all"
+- name: GitLab CI
+  filter: "gitlab"
+- name: Docker
+  filter: "docker"
+- name: Kubernetes
+  filter: "kubernetes"
+- name: Flux CD
+  filter: "fluxcd"
+- name: Helm
+  filter: "helm"
+- name: AWS
+  filter: "aws"
+- name: Yandex Cloud
+  filter: "yandex"
+- name: Terraform
+  filter: "terraform"
+- name: Ansible
+  filter: "ansible"
+- name: VPN
+  filter: "vpn"
+
+# your projects
+projects:
+- name: 🚀 CI/CD с GitLab + Kubernetes
+  url: "/posts/ci-cd-gitlab/"
+  summary: |
+    Настроил полный CI/CD пайплайн с GitLab CI, Docker и Kubernetes для стартапа
+    
+    **Результаты:**
+    - ✅ Время деплоя: с 2 часов до 10 минут
+    - ✅ Ошибки при деплое: −90%
+    - ✅ Частота деплоя: с 1 раза в неделю до 10+ раз в день
+  tags: ["gitlab", "docker", "kubernetes", "fluxcd", "helm"]
+
+- name: ☁️ Миграция AWS → Yandex Cloud
+  url: "/posts/migration-yandex-cloud/"
+  summary: |
+    Перенес инфраструктуру компании из AWS в Yandex Cloud в рамках импортозамещения
+    
+    **Результаты:**
+    - ✅ Затраты на инфраструктуру: −40%
+    - ✅ Downtime при миграции: всего 2 часа
+    - ✅ Полная независимость от западных провайдеров
+  tags: ["aws", "yandex"]
+
+- name: 🔐 VPN для доступа к зарубежным сервисам
+  url: "/posts/vpn-services/"
+  summary: |
+    Развернул VPN-решение для доступа к заблокированным IT-сервисам (OpenAI, GitHub Copilot).
+    
+    **Результаты:**
+    - ✅ Стабильная работа 6+ месяцев
+    - ✅ Скорость: 100+ Мбит/с
+    - ✅ Доступ к OpenAI API, ChatGPT, GitHub Copilot
+  tags: ["docker","ansible", "vpn"]
+

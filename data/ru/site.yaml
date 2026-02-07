@@ -1,0 +1,20 @@
+copyright: Все права нарушены 😜
+
+description: "DevOps-инженер и CloudAdmin: автоматизация инфраструктуры, CI/CD, Kubernetes, миграция в российские облака. 25 лет опыта. Ставка 3000₽/час. Telegram: @devops_cloudadmin_bot"
+
+customMenus:
+- name: О себе
+  url: /about/
+  hideFromNavbar: false
+  showOnFooter: true
+- name: Услуги
+  url: /services/
+  hideFromNavbar: false
+  showOnFooter: true
+
+openGraph:
+  title: DevOps и CloudAdmin
+  type: website
+  description: Портфолио и услуги DevOps-инженера и CloudAdmin.
+  image: images/author/john.png
+  url: https://ru-admin.github.io
