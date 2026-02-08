@@ -80,9 +80,11 @@ menu:
 ---
 
 #### Архитектура
-```
-AWS (EC2, RDS, S3) → Terraform → Yandex Cloud (Compute, Managed PostgreSQL, Object Storage)
-```
+{{< mermaid align="center" >}}
+graph LR
+    A[AWS: EC2, RDS, S3] --> B[Terraform]
+    B --> C[Yandex Cloud: Compute, PostgreSQL, Object Storage]
+{{< /mermaid >}}
 
 ---
 

@@ -83,11 +83,13 @@ menu:
 ---
 
 #### Архитектура
-```
-Клиенты → WireGuard (Docker) → VPS (NL) → Заблокированные сервисы
-                ↓
-         Prometheus + Grafana
-```
+{{< mermaid align="center" >}}
+graph LR
+    A[Клиенты] --> B[WireGuard Docker]
+    B --> C[VPS NL]
+    C --> D[Заблокированные сервисы]
+    B --> E[Prometheus + Grafana]
+{{< /mermaid >}}
 
 ---
 

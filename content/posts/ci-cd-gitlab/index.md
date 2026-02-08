@@ -59,9 +59,12 @@ menu:
 ---
 
 #### Архитектура
-```
-GitLab CI → Harbor → Flux CD → Kubernetes
-```
+{{< mermaid align="center" >}}
+graph LR
+    A[GitLab CI] --> B[Harbor]
+    B --> C[Flux CD]
+    C --> D[Kubernetes]
+{{< /mermaid >}}
 
 ---
 

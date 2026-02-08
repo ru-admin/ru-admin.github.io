@@ -68,7 +68,13 @@ params:
         light: true
         dark: true
         default: dark
-        
+
+    flowchart:
+      enable: true
+      services:
+        mermaid:
+          theme: forest
+
     portfolio:
       enable: true
 
