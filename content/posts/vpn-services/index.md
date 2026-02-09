@@ -62,14 +62,31 @@ menu:
 
 #### Технологии
 {{< split 2 2 2 2 2 2 >}}
-![WireGuard](/icons/wireguard.svg) WireGuard
+<div style="text-align: center;">
+
+![WireGuard](/icons/wireguard.svg)
+
+<div>WireGuard</div></div>
+
 ---
-![Docker](/icons/docker-original.svg) Docker
+<div style="text-align: center;">
+
+![Docker](/icons/docker-original.svg)
+<div>Docker</div></div>
+
 ---
-![Ansible](/icons/ansible-original.svg) Ansible
+<div style="text-align: center;">
+
+![Ansible](/icons/ansible-original.svg)
+<div>Ansible</div></div>
+
 ---
-![Prometheus](/icons/prometheus-original.svg) Prometheus
+<div style="text-align: center;">
+
+![Prometheus](/icons/prometheus-original.svg)
+<div>Prometheus</div></div>
 {{< /split >}}
+
 
 ---
 

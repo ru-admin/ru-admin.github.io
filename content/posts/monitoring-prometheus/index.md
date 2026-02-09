@@ -67,17 +67,42 @@ menu:
 
 #### Технологии
 {{< split 2 2 2 2 2 2 >}}
-![Prometheus](/icons/prometheus-original.svg) Prometheus
+<div style="text-align: center;">
+
+![Prometheus](/icons/prometheus-original.svg)
+
+<div>Prometheus</div></div>
+
 ---
-![Grafana](/icons/grafana-original.svg) Grafana
+<div style="text-align: center;">
+
+![Grafana](/icons/grafana-original.svg)
+<div>Grafana</div></div>
+
 ---
-![Kubernetes](/icons/kubernetes-plain.svg) Kubernetes
+<div style="text-align: center;">
+
+![Kubernetes](/icons/kubernetes-plain.svg)
+<div>Kubernetes</div></div>
+
 ---
-![Docker](/icons/docker-original.svg) Docker
+<div style="text-align: center;">
+
+![Docker](/icons/docker-original.svg)
+<div>Docker</div></div>
+
 ---
-![Helm](/icons/helm-original.svg) Helm
+<div style="text-align: center;">
+
+![Helm](/icons/helm-original.svg)
+<div>Helm</div></div>
+
 ---
-![Linux](/icons/linux-original.svg) Linux
+<div style="text-align: center;">
+
+![Linux](/icons/linux-original.svg)
+<div>Linux</div></div>
+
 {{< /split >}}
 
 ---

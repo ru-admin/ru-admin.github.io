@@ -21,7 +21,7 @@ buttons:
   filter: "helm"
 - name: AWS
   filter: "aws"
-- name: Yandex Cloud
+- name: Yandex
   filter: "yandex"
 - name: Terraform
   filter: "terraform"
@@ -29,10 +29,6 @@ buttons:
   filter: "ansible"
 - name: VPN
   filter: "vpn"
-- name: Prometheus
-  filter: "prometheus"
-- name: Grafana
-  filter: "grafana"
 - name: Monitoring
   filter: "monitoring"
 
@@ -80,5 +76,5 @@ projects:
     - ✅ Обнаружение проблем с 30 минут до 1 минуты
     - ✅ Время восстановления сократилось на 60% 
     - ✅ Полная прозрачность работы всех сервисов
-  tags: ["kubernetes", "docker", "prometheus", "grafana", "monitoring"]
+  tags: ["kubernetes", "docker", "monitoring"]
 

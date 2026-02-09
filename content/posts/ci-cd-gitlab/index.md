@@ -37,15 +37,36 @@ menu:
 
 #### Технологии
 {{< split 2 2 2 2 2 2 >}}
-![GitLab](/icons/gitlab-original.svg) GitLab
+<div style="text-align: center;">
+
+![GitLab](/icons/gitlab-original.svg)
+
+<div>GitLab</div></div>
+
 ---
-![Docker](/icons/docker-original.svg) Docker
+<div style="text-align: center;">
+
+![Docker](/icons/docker-original.svg)
+<div>Docker</div></div>
+
 ---
-![Kubernetes](/icons/kubernetes-plain.svg) K8s
+<div style="text-align: center;">
+
+![Kubernetes](/icons/kubernetes-plain.svg)
+<div>Kubernetes</div></div>
+
 ---
-![Helm](/icons/helm-original.svg) Helm
+<div style="text-align: center;">
+
+![Helm](/icons/helm-original.svg)
+<div>Helm</div></div>
+
 ---
-![Flux CD](/icons/flux-cd.svg) Flux CD
+<div style="text-align: center;">
+
+![Flux CD](/icons/flux-cd.svg)
+<div>Flux CD</div></div>
+
 {{< /split >}}
 
 ---

@@ -55,18 +55,43 @@ menu:
 
 #### Технологии
 {{< split 2 2 2 2 2 2 >}}
-![AWS](/icons/aws.svg) AWS
+<div style="text-align: center;">
+
+![AWS](/icons/aws.svg)
+
+<div>AWS</div></div>
+
 ---
-![Yandex Cloud](/icons/yandex.svg) Yandex Cloud
+<div style="text-align: center;">
+
+![Yandex Cloud](/icons/yandex.svg)
+<div>Yandex Cloud</div></div>
+
 ---
-![Terraform](/icons/terraform-original.svg) Terraform
+<div style="text-align: center;">
+
+![Terraform](/icons/terraform-original.svg)
+<div>Terraform</div></div>
+
 ---
-![Prometheus](/icons/prometheus-original.svg) Prometheus
+<div style="text-align: center;">
+
+![Prometheus](/icons/prometheus-original.svg)
+<div>Prometheus</div></div>
+
 ---
-![Grafana](/icons/grafana-original.svg) Grafana
+<div style="text-align: center;">
+
+![Grafana](/icons/grafana-original.svg)
+<div>Grafana</div></div>
+
 ---
-![GitLab CI](/icons/gitlab-original.svg) GitLab CI
+<div style="text-align: center;">
+
+![GitLab CI](/icons/gitlab-original.svg)
+<div>GitLab CI</div></div>
 {{< /split >}}
+
 
 ---
 
