@@ -1,3 +1,27 @@
+.home .greeting {
+    text-shadow: 
+        -1px -1px 0 #858585,
+        1px -1px 0 #858585,
+        -1px 1px 0 #858585,
+        1px 1px 0 #858585,
+        -1px 0 0 #858585,
+        1px 0 0 #858585,
+        0 -1px 0 #858585,
+        0 1px 0 #858585;
+}
+
+.home .typing-carousel {
+    text-shadow: 
+        -1px -1px 0 #858585,
+        1px -1px 0 #858585,
+        -1px 1px 0 #858585,
+        1px 1px 0 #858585,
+        -1px 0 0 #858585,
+        1px 0 0 #858585,
+        0 -1px 0 #858585,
+        0 1px 0 #858585;
+}
+
 html[data-theme="dark"] a {
   color: #fff;
 }
