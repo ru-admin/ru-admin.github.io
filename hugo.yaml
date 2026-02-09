@@ -44,7 +44,7 @@ outputs:
 enableEmoji: true
 
 params:
-  background: /images/background-dark.webp
+  background: /images/background.webp
   # darkBackground: /images/background-dark.webp
   logo:
     main: images/logo.png
