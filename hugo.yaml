@@ -67,7 +67,7 @@ params:
       services:
         light: true
         dark: true
-        default: dark
+        default: system
 
     flowchart:
       enable: true

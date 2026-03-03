@@ -78,3 +78,14 @@ projects:
     - ✅ Полная прозрачность работы всех сервисов
   tags: ["kubernetes", "docker", "monitoring"]
 
+- name: 👩‍❤️‍💋‍👨 CI/CD для Dating-сервиса
+  url: "/posts/ci-cd-dating/"
+  summary: |
+    Выстроил полный DevOps-стек для продакшен запуска Dating-сервиса (Nest.js + Angular)
+    
+    **Результаты:**
+    - ✅ Автоматический деплой по git push
+    - ✅ Мониторинг с алертами в Telegram
+    - ✅ Почасовые бэкапы БД в AWS S3
+    - ✅ Полная безопасность и разделение dev/prod
+  tags: ["gitlab", "docker", "ansible", "monitoring"]
