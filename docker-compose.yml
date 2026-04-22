@@ -1,0 +1,11 @@
+services:
+  portfolio-website:
+    image: klakegg/hugo:0.125.7-ext-alpine
+    working_dir: /src
+    command: >
+      sh -c "apk add --no-cache nodejs npm && npm ci && hugo --gc --minify && busybox httpd -f -p 1313 -h /src/public"
+    volumes:
+      - ./:/src
+    ports:
+      - "1313:1313"
+    restart: unless-stopped
