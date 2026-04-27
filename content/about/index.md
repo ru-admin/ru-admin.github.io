@@ -82,7 +82,7 @@ hero: "images/about-hero.webp"
 
 ## Контакты
 
-📧 **Email:** your-email@example.com  
+📧 **Email:** hijqxbgbqbx5o49mpihr@mail.ru  
 
 💬 **Telegram:** https://t.me/devops_cloudadmin_bot  
 
@@ -90,4 +90,4 @@ hero: "images/about-hero.webp"
 
 💼 **FL.ru:** https://www.fl.ru/users/devops4u
 
-[Получить консультацию →](https://t.me/devops4u4bot)
+[Получить консультацию →](https://t.me/devops_cloudadmin_bot)
