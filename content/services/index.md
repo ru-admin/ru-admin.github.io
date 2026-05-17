@@ -1,32 +1,33 @@
 ---
-title: "Услуги"
+title: "Services"
+date: 1111-01-01T00:00:00
 type: "services"
-hero: "images/services-hero.webp"
+hero: "hero.webp"
 ---
 
-## Модели работы
+## Work Models
 
 {{< split 6 6 >}}
 
-##### 1. Почасовая оплата
-- **Ставка:** 3000 ₽/час
-- **Минимум:** 1 час
-- **Подходит для:** разовые задачи, консультации, аудиты
+##### 1. Hourly Rate
+- **Rate:** $40/hr
+- **Minimum:** 1 hour
+- **Best for:** one-time tasks, consultations, audits
 
 ---
 
-##### 2. Постоянное обслуживание
-- **Базовый пакет:** 40 000 ₽/мес (10 часов)
-- **Дополнительные часы:** 2 500 ₽/час
-- **Подходит для:** постоянная поддержка, обслуживание инфраструктуры
+##### 2. Retainer / Ongoing Support
+- **Base package:** $500/mo (10 hours included)
+- **Extra hours:** $35/hr
+- **Best for:** ongoing infrastructure support and maintenance
 
 {{< /split >}}
 
 {{< split 6 6 >}}
 
-##### 3. Проектная работа
-- **Цена:** зависит от объема
-- **Подходит для:** крупные проекты с четким ТЗ
+##### 3. Project-Based
+- **Rate:** negotiable based on scope
+- **Best for:** large projects with a clear specification and defined deliverables
 
 ---
 
@@ -34,105 +35,105 @@ hero: "images/services-hero.webp"
 
 ---
 
-## Категории услуг
+## Service Categories
 
 {{< split 6 6 >}}
 
-##### DevOps консалтинг
-- Аудит текущей инфраструктуры
-- Roadmap внедрения DevOps практик
-- Оптимизация процессов разработки
-- Обучение команды
+##### DevOps Consulting
+- Infrastructure audit and assessment
+- DevOps adoption roadmap
+- Development process optimization
+- Team training and knowledge transfer
 
-**Цена:** от 15 000 ₽ (консультация 4-5 часов)
+**Price:** from $180 (4–5 hour consultation)
 
 ---
 
-##### CI/CD автоматизация
-- Настройка GitLab CI / GitHub Actions
-- Создание пайплайнов (Build → Test → Deploy)
-- GitOps с Flux CD / Argo CD
-- Автоматизация тестирования
+##### CI/CD Automation
+- GitLab CI / GitHub Actions setup
+- Full pipeline: Build → Test → Deploy
+- GitOps with Flux CD / Argo CD
+- Test automation integration
 
-**Цена:** от 15 000 ₽ (базовый пайплайн)
+**Price:** from $180 (basic pipeline)
 
 {{< /split >}}
 
 {{< split 6 6 >}}
 
-##### Миграция в облака
-- Аудит текущей инфраструктуры
-- План миграции
-- Перенос в Yandex Cloud / Selectel
-- Оптимизация затрат (до −40%)
+##### Cloud Migration
+- Infrastructure audit
+- Migration planning
+- Deployment to AWS, GCP, Azure, Hetzner, or any target cloud
+- Cost optimization (up to −40%)
 
-**Цена:** от 30 000 ₽ (зависит от объема)
+**Price:** from $350 (depends on scope)
 
 ---
 
 ##### Kubernetes
-- Развертывание кластера (Managed или Self-hosted)
-- Миграция приложений в K8s
+- Cluster setup (Managed or Self-hosted)
+- Application migration to K8s
 - Helm charts, GitOps
-- Troubleshooting
+- Troubleshooting and optimization
 
-**Цена:** от 30 000 ₽ (кластер + базовые приложения)
+**Price:** from $350 (cluster + baseline apps)
 
 {{< /split >}}
 
 {{< split 6 6 >}}
 
-##### Мониторинг и логирование
+##### Monitoring & Logging
 - Prometheus + Grafana + Alertmanager
-- Loki для логов
-- APM (Jaeger, Zipkin)
+- Loki for log aggregation
+- APM with Jaeger / Zipkin
 - Custom dashboards
 
-**Цена:** от 30 000 ₽ (полный стек)
+**Price:** from $350 (full observability stack)
 
 ---
 
-##### Системное администрирование
-- Linux серверы (Ubuntu, CentOS, RHEL)
+##### System Administration
+- Linux servers (Ubuntu, Debian, RHEL)
 - Windows Server + RDS
-- Базы данных (PostgreSQL, MySQL)
-- Веб-серверы (Nginx, Apache, Caddy)
+- Databases (PostgreSQL, MySQL)
+- Web servers (Nginx, Apache, Caddy)
 
-**Цена:** от 3 000 ₽ (настройка 1 сервера)
+**Price:** from $40 (single server setup)
 
 {{< /split >}}
 
 {{< split 6 6 >}}
 
-##### Автоматизация инфраструктуры
-- Ansible роли и playbooks
-- Terraform модули
+##### Infrastructure Automation
+- Ansible roles and playbooks
+- Terraform modules
 - Infrastructure as Code
-- Version control для инфраструктуры
+- Version-controlled infrastructure
 
-**Цена:** от 30 000 ₽ (базовая автоматизация)
+**Price:** from $350 (baseline automation)
 
 ---
 
-##### Безопасность и VPN
-- Недетектируемые VPN (vless xray)
-- OpenVPN, WireGuard
-- SSL/TLS сертификаты
-- Security hardening
+##### Security & Secure Access
+- WireGuard / OpenVPN corporate VPN
+- Zero-trust network access
+- SSL/TLS certificate management
+- Security hardening and CIS benchmarks
 
-**Цена:** от 3 000 ₽ (VPN сервер за 30 минут)
+**Price:** from $40 (VPN server setup)
 
 {{< /split >}}
 
 {{< split 6 6 >}}
 
-##### Постоянное обслуживание
-- Мониторинг 24/7
-- Реакция на инциденты
-- Обновления и патчи
-- Оптимизация производительности
+##### Managed Support
+- 24/7 infrastructure monitoring
+- Incident response
+- Updates and patching
+- Performance optimization
 
-**Цена:** от 30 000 ₽/мес
+**Price:** from $400/mo
 
 ---
 
@@ -140,94 +141,92 @@ hero: "images/services-hero.webp"
 
 ---
 
-## Пакетные предложения
+## Packages
 
 {{< split 6 6 >}}
 
-##### Пакет "Стартовый" — 60 000 ₽
-**Для стартапов и малого бизнеса**
+##### Starter — $600
+**For startups and small teams**
 
-✅ Аудит инфраструктуры  
-✅ Базовая настройка CI/CD  
+✅ Infrastructure audit  
+✅ Basic CI/CD setup  
 ✅ Docker + Docker Compose  
-✅ Базовый мониторинг (Prometheus + Grafana)  
-✅ Документация  
+✅ Basic monitoring (Prometheus + Grafana)  
+✅ Documentation  
 
-**Длительность:** 5-7 дней
+**Timeline:** 5–7 days
 
 ---
 
-##### Пакет "Профессиональный" — 180 000 ₽
-**Для средних компаний**
+##### Professional — $1,800
+**For growing companies**
 
-✅ Все из "Стартового"  
-✅ Kubernetes кластер  
+✅ Everything in Starter  
+✅ Kubernetes cluster  
 ✅ GitOps (Flux CD)  
-✅ Полный стек мониторинга (+ Loki + Jaeger)  
+✅ Full observability stack (+ Loki + Jaeger)  
 ✅ Terraform IaC  
-✅ Обучение команды (2 дня)  
+✅ Team training (2 days)  
 
-**Длительность:** 2-3 недели
-
-{{< /split >}}
-
-{{< split 6 6 >}}
-
-##### Пакет "Корпоративный" — 380 000 ₽
-**Для крупных компаний**
-
-✅ Все из "Профессионального"  
-✅ Миграция в облако (AWS/GCP → Yandex)  
-✅ Disaster Recovery план  
-✅ Security audit и hardening  
-✅ 3 месяца постоянного обслуживания (60 часов)  
-
-**Длительность:** 1-1.5 месяца
-
----
-
-{{< /split >}}
-
----
-
-## Специальные предложения
-
-{{< split 6 6 >}}
-
-##### Миграция в российские облака
-**Актуально из-за санкций**
-
-- AWS/GCP/Azure → Yandex Cloud/Selectel
-- Минимальный downtime
-- Экономия до −40%
-
-**Цена:** от 30 000 ₽
-
----
-
-### VPN для обхода санкций
-**Высокий спрос в 2026**
-
-- vless xray (недетектируемый)
-- доступ к ресурсам, блокирующим доступ из России (ChatGPT, Google Gemini, Canva и тд)
-- Развертывание за 30 минут
-
-**Цена:** 3 000 ₽ (настройка)
+**Timeline:** 2–3 weeks
 
 {{< /split >}}
 
 {{< split 6 6 >}}
 
-##### Matrix мессенджер
-**Альтернатива Telegram и Watsapp**
+##### Enterprise — $3,800
+**For large organizations**
 
-- Self-hosted Matrix Synapse
-- Element клиенты
-- Аудио и видео звонки
-- До 100 пользователей
+✅ Everything in Professional  
+✅ Cloud migration (any source → any target)  
+✅ Disaster Recovery planning  
+✅ Security audit and hardening  
+✅ 3 months of managed support (60 hours)  
 
-**Цена:** 6 000 ₽ (настройка) + 3 000 ₽/мес (поддержка)
+**Timeline:** 1–1.5 months
 
 ---
+
+{{< /split >}}
+
+---
+
+## Special Offers
+
+{{< split 6 6 >}}
+
+##### Cloud Migration
+**Move fast, stay reliable**
+
+- Any cloud → AWS / GCP / Azure / Hetzner
+- Minimal downtime migration
+- Cost savings up to −40%
+
+**Price:** from $350
+
+---
+
+##### Corporate VPN Setup
+**Secure remote access for your team**
+
+- WireGuard or OpenVPN deployment
+- Site-to-site and client VPN
+- Deployed within hours
+
+**Price:** from $40 (setup)
+
+{{< /split >}}
+
+{{< split 6 6 >}}
+
+##### Self-Hosted Collaboration Stack
+**Own your communication infrastructure**
+
+- Matrix Synapse (self-hosted messenger)
+- Element clients for web and mobile
+- Audio and video calls included
+- Up to 100 users
+
+**Price:** $90 (setup) + $40/mo (support)
 
 {{< /split >}}

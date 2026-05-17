@@ -1,86 +1,85 @@
 ---
-title: "Обо мне"
+title: "About"
+date: 1111-01-01T00:00:00
 type: "about"
-hero: "images/about-hero.webp"
+hero: "hero.webp"
 ---
 
-## Профессиональная биография
+## Professional background
 
-Прошел путь от сборки компьютеров и ремонта техники до проектирования облачной инфраструктуры. **25 лет в IT** — от железа до облаков, от DOS до Kubernetes.
+I have gone from assembling and repairing computers to designing cloud infrastructure. **25 years in IT** — from hardware to cloud, from DOS to Kubernetes.
 
-Начинал с ZX Spectrum и Assembler, затем Windows 95 и сборка ПК. В начале 2000-х — системное администрирование Windows и Linux. С 2010-х — миграция в облака, автоматизация, DevOps практики. Сегодня специализируюсь на **Kubernetes, CI/CD, миграции в российские облака**.
+I started with ZX Spectrum and Assembler, then Windows 95 and PC assembly. In the early 2000s I moved into Windows and Linux system administration. Since the 2010s I have focused on cloud migration, automation, and DevOps practices. Today I specialize in **Kubernetes, CI/CD, and migration to any cloud providers**.
 
-**Уникальное преимущество:** понимание инфраструктуры на всех уровнях — от BIOS до Kubernetes. Использую **AI-инструменты ежедневно** для решения задач и быстрого освоения новых технологий.
+**Unique advantage:** end-to-end infrastructure understanding — from BIOS to Kubernetes. I use **AI tools daily** to solve tasks and quickly master new technologies.
 
-## Карьерный путь
+## Career path
 
 {{< split 6 6 >}}
 
-##### 2000-2005: Начало в IT
-- Сборка и ремонт компьютеров
-- Настройка локальных сетей
-- Windows администрирование
-- **Технологии:** Windows 95/98/XP, DOS, Assembler
+##### 2000-2005: Entry into IT
+- PC assembly and repair
+- Local network setup
+- Windows administration
+- **Technologies:** Windows 95/98/XP, DOS, Assembler
 
 ---
 
-##### 2005-2010: Системное администрирование
-- Администрирование Windows Server
-- Первый опыт с Linux (Ubuntu, CentOS)
-- Веб-серверы (Apache, IIS)
-- **Технологии:** Windows Server, Linux, Apache, MySQL
+##### 2005-2010: System administration
+- Windows Server administration
+- First Linux production experience (Ubuntu, CentOS)
+- Web servers (Apache, IIS)
+- **Technologies:** Windows Server, Linux, Apache, MySQL
 
 {{< /split >}}
 
 {{< split 6 6 >}}
 
-##### 2010-2015: Виртуализация и облака
-- Внедрение виртуализации (VMware, Hyper-V)
-- Первый опыт с AWS
-- Bash скриптинг и автоматизация
-- **Технологии:** VMware, AWS, Bash, PowerShell
+##### 2010-2015: Virtualization and cloud
+- Virtualization adoption (VMware, Hyper-V)
+- First AWS projects
+- Bash scripting and automation
+- **Technologies:** VMware, AWS, Bash, PowerShell
 
 ---
 
-##### 2015-2020: DevOps практики
-- CI/CD пайплайны (Jenkins, GitLab CI)
-- Docker и контейнеризация
+##### 2015-2020: DevOps practices
+- CI/CD pipelines (Jenkins, GitLab CI)
+- Docker and containerization
 - Infrastructure as Code (Ansible, Terraform)
-- **Технологии:** Docker, Ansible, Terraform, GitLab CI
+- **Technologies:** Docker, Ansible, Terraform, GitLab CI
 
 {{< /split >}}
 
 {{< split 6 6 >}}
 
-##### 2020-2026: Kubernetes и Cloud-Native
-- Kubernetes кластеры (Production)
+##### 2020-2026: Kubernetes and Cloud Native
+- Production Kubernetes clusters
 - GitOps (Flux CD, Argo CD)
-- Миграция в Yandex Cloud (из-за санкций)
-- AI-автоматизация (Deep Agent)
-- **Технологии:** Kubernetes, Helm, Yandex Cloud, GitOps, AI
+- Migration between any Clouds
+- AI-assisted automation
+- **Technologies:** Kubernetes, Helm, Cloud, GitOps, AI
 
 ---
 
-
 {{< /split >}}
 
+## Work philosophy
 
-## Философия работы
+#### Principles
+1. **Automation first** - manual operations should be the exception
+2. **Infrastructure as Code** - everything in Git, versioned and reproducible
+3. **Fast and reliable** - rapid delivery without sacrificing stability
+4. **AI as a tool** - agent-assisted workflows for new tasks
+5. **Business-oriented mindset** - technology serves business outcomes
 
-#### Принципы
-1. **Автоматизация прежде всего** - ручные операции должны быть исключением
-2. **Infrastructure as Code** - всё в Git, версионируется, воспроизводимо
-3. **Быстро и качественно** - VPN за 20 минут, но стабильно работающий
-4. **AI как инструмент** - Deep Agent для решения новых задач
-5. **Понимание бизнеса** - технологии для решения бизнес-задач, а не ради технологий
+#### Approach
+- **Transparency:** realistic timelines and estimates
+- **Documentation:** every decision is documented
+- **Enablement:** knowledge transfer to the team
+- **Proactiveness:** issues are prevented before they escalate
 
-#### Подход к работе
-- **Прозрачность:** честные сроки и оценки
-- **Документирование:** каждое решение задокументировано
-- **Обучение:** передаю знания команде
-- **Проактивность:** предупреждаю проблемы до их появления
-
-## Контакты
+## Contacts
 
 📧 **Email:** hijqxbgbqbx5o49mpihr@mail.ru  
 
@@ -90,4 +89,4 @@ hero: "images/about-hero.webp"
 
 💼 **FL.ru:** https://www.fl.ru/users/devops4u
 
-[Получить консультацию →](https://t.me/devops_cloudadmin_bot)
+[Get a consultation →](https://t.me/devops_cloudadmin_bot)
