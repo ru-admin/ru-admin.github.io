@@ -20,14 +20,10 @@ buttons:
   filter: "helm"
 - name: AWS
   filter: "aws"
-- name: Yandex
-  filter: "yandex"
 - name: Terraform
   filter: "terraform"
 - name: Ansible
   filter: "ansible"
-- name: VPN
-  filter: "vpn"
 - name: Monitoring
   filter: "monitoring"
 
@@ -42,6 +38,17 @@ projects:
     - ✅ Deployment errors: −90%
     - ✅ Deployment frequency: from 1 per week to 10+ per day
   tags: ["gitlab", "docker", "kubernetes", "fluxcd", "helm"]
+
+- name: ☁️ AWS → Cost-Optimized Private Cloud
+  url: "/posts/migration-from-aws/"
+  summary: |
+    Migrated full-stack company infrastructure from AWS to a cost-optimized cloud to eliminate vendor lock-in.
+    
+    **Results:**
+    - ✅ Infrastructure costs: −40% reduction
+    - ✅ Migration downtime: only 2 hours
+    - ✅ Zero functionality loss and vendor independence
+  tags: ["aws", "cloud", "terraform"]
 
 - name: 🕵🏻‍♂️ Prometheus + Grafana + Loki Monitoring
   url: "/posts/monitoring-prometheus/"

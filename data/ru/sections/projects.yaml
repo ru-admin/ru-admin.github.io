@@ -46,7 +46,7 @@ projects:
   tags: ["gitlab", "docker", "kubernetes", "fluxcd", "helm"]
 
 - name: ☁️ Миграция AWS → Yandex Cloud
-  url: "/ru/posts/migration-yandex-cloud/"
+  url: "/ru/posts/migration-from-aws/"
   summary: |
     Перенес инфраструктуру компании из AWS в Yandex Cloud в рамках импортозамещения
     
