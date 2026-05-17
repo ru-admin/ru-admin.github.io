@@ -1,41 +1,41 @@
 ---
-title: "CI/CD с GitLab + Kubernetes: деплой за 10 минут"
-description: "Автоматизация CI/CD: от 2 часов до 10 минут деплоя"
+title: "CI/CD with GitLab + Kubernetes: deploy in 10 minutes"
+description: "CI/CD automation: from 2 hours to 10 minutes per deploy"
 hero: "hero.webp"
 tags: ["gitlab", "kubernetes", "docker", "fluxcd", "helm"]
 menu:
   sidebar:
-    name: "CI/CD в k8s"
+    name: "CI/CD in k8s"
     identifier: cicdk8s
     weight: 10
 ---
 
-## Автоматизация CI/CD: от 2 часов до 10 минут деплоя
+## CI/CD automation: from 2 hours to 10 minutes per deploy
 
 ---
 
-#### Клиент
-Стартап в сфере e-commerce, команда разработки 5 человек
+#### Client
+E-commerce startup, 5-person engineering team
 
 ---
 
-#### Задача
-- Ручной деплой занимал 2 часа
-- Частые ошибки при развертывании
-- Невозможность быстро откатить изменения
-- Требовалось: автоматизация CI/CD, GitOps, быстрый откат
+#### Challenge
+- Manual deployment took 2 hours
+- Frequent release errors
+- No fast rollback path
+- Required: CI/CD automation, GitOps, fast rollback
 
 ---
 
-#### Решение
+#### Solution
 1. Self-hosted GitLab
-2. GitLab CI пайплайн (Build → Test → Deploy)
-3. Managed Kubernetes в Yandex Cloud
-4. Flux CD для GitOps
+2. GitLab CI pipeline (Build → Test → Deploy)
+3. Managed Kubernetes in Yandex Cloud
+4. Flux CD for GitOps
 
 ---
 
-#### Технологии
+#### Technologies
 {{< split 2 2 2 2 2 2 >}}
 <div style="text-align: center;">
 
@@ -71,15 +71,15 @@ menu:
 
 ---
 
-#### Результаты
-✅ **Время деплоя:** с 2 часов до 10 минут (12x)  
-✅ **Ошибки:** −90%  
-✅ **Частота деплоя:** с 1/неделя до 10+/день  
-✅ **Время отката:** с 1 часа до 2 минут  
+#### Results
+✅ **Deploy time:** from 2 hours to 10 minutes (12x)  
+✅ **Errors:** −90%  
+✅ **Deploy frequency:** from 1/week to 10+/day  
+✅ **Rollback time:** from 1 hour to 2 minutes  
 
 ---
 
-#### Архитектура
+#### Architecture
 {{< mermaid align="center" >}}
 graph LR
     A[GitLab CI] --> B[Harbor]
@@ -89,11 +89,10 @@ graph LR
 
 ---
 
-#### Длительность
-5 дней
+#### Duration
+5 days
 
 ---
 
-#### Стоимость
-от 40 000 ₽
-
+#### Cost
+from $500
