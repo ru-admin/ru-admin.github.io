@@ -1,0 +1,22 @@
+copyright: All rights violated 😜
+
+description: "DevOps Engineer and CloudAdmin: infrastructure automation, CI/CD, Kubernetes, migration to Russian cloud providers. 25 years of experience. Rate: ₽3000/hour. Telegram: @devops_cloudadmin_bot"
+
+customMenus:
+- name: About
+  url: /about/
+  hideFromNavbar: false
+  showOnFooter: true
+- name: Services
+  url: /services/
+  hideFromNavbar: false
+  showOnFooter: true
+
+openGraph:
+  title: DevOps and CloudAdmin
+  type: website
+  description: Portfolio and services of a DevOps Engineer and CloudAdmin.
+  image: images/ogcard.webp
+  url: https://ru-admin.github.io
+
+getConsultation: "Get Consultation"

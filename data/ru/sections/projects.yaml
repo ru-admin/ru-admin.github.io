@@ -35,7 +35,7 @@ buttons:
 # your projects
 projects:
 - name: 🚀 CI/CD с GitLab + Kubernetes
-  url: "/posts/ci-cd-gitlab/"
+  url: "/ru/posts/ci-cd-gitlab/"
   summary: |
     Настроил полный CI/CD пайплайн с GitLab CI, Docker и Kubernetes для стартапа
     
@@ -46,7 +46,7 @@ projects:
   tags: ["gitlab", "docker", "kubernetes", "fluxcd", "helm"]
 
 - name: ☁️ Миграция AWS → Yandex Cloud
-  url: "/posts/migration-yandex-cloud/"
+  url: "/ru/posts/migration-yandex-cloud/"
   summary: |
     Перенес инфраструктуру компании из AWS в Yandex Cloud в рамках импортозамещения
     
@@ -57,7 +57,7 @@ projects:
   tags: ["aws", "yandex"]
 
 - name: 🔐 VPN для доступа к зарубежным сервисам
-  url: "/posts/vpn-services/"
+  url: "/ru/posts/vpn-services/"
   summary: |
     Развернул VPN-решение для доступа к заблокированным IT-сервисам (OpenAI, GitHub Copilot).
     
@@ -68,7 +68,7 @@ projects:
   tags: ["docker","ansible", "vpn"]
 
 - name: 🕵🏻‍♂️ Мониторинг Prometheus + Grafana + Loki
-  url: "/posts/monitoring-prometheus/"
+  url: "/ru/posts/monitoring-prometheus/"
   summary: |
     Установил в кластер k8s observability стек.
     
@@ -79,7 +79,7 @@ projects:
   tags: ["kubernetes", "docker", "monitoring"]
 
 - name: 👩‍❤️‍💋‍👨 CI/CD для Dating-сервиса
-  url: "/posts/ci-cd-dating/"
+  url: "/ru/posts/ci-cd-dating/"
   summary: |
     Выстроил полный DevOps-стек для продакшен запуска Dating-сервиса (Nest.js + Angular)
     

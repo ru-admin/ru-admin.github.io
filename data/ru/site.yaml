@@ -4,11 +4,11 @@ description: "DevOps-инженер и CloudAdmin: автоматизация и
 
 customMenus:
 - name: О себе
-  url: /about/
+  url: /ru/about/
   hideFromNavbar: false
   showOnFooter: true
 - name: Услуги
-  url: /services/
+  url: /ru/services/
   hideFromNavbar: false
   showOnFooter: true
 
@@ -16,5 +16,7 @@ openGraph:
   title: DevOps и CloudAdmin
   type: website
   description: Портфолио и услуги DevOps-инженера и CloudAdmin.
-  image: images/ogcard.webp
-  url: https://ru-admin.github.io
+  image: images/ogcard-ru.webp
+  url: https://ru-admin.github.io/ru
+
+getConsultation: "Получить консультацию"

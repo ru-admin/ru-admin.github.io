@@ -1,0 +1,58 @@
+section:
+  name: Tech Stack
+  id: stacks
+  enable: true
+  weight: 3
+  showOnNavbar: false
+  template: sections/stacks.html
+
+skills:
+- name: Containerization and Orchestration
+  summary: |
+    ![Docker](icons/docker-original.svg) Docker
+    
+    ![Podman](icons/podman-original.svg) Podman
+    
+    ![Kubernetes](icons/kubernetes-plain.svg) Kubernetes
+    
+    ![Helm](icons/helm-original.svg) Helm
+
+- name: CI/CD
+  summary: |
+    ![GitLab](icons/gitlab-original.svg) GitLab
+    
+    ![GitHub](icons/github-original.svg) GitHub Actions
+    
+    ![Forgejo](icons/forgejo-original.svg) Forgejo & Gitea
+
+- name: Infrastructure as Code
+  summary: |
+    ![Terraform](icons/terraform-original.svg) Terraform
+    
+    ![Ansible](icons/ansible-original.svg) Ansible
+
+- name: Cloud Platforms
+  summary: |
+    ![AWS](icons/aws.svg) AWS
+    
+    ![GCP](icons/gcp.png) GCP
+
+    ![Yandex](icons/yandex-cloud.svg)
+    
+    ![Selectel](icons/selectel.svg)
+
+- name: Monitoring
+  summary: |
+    ![Prometheus](icons/prometheus-original.svg) Prometheus
+    
+    ![Grafana](icons/grafana-original.svg) Grafana
+    
+    ![Zabbix](icons/zabbix.png) Zabbix
+
+- name: Operating Systems
+  summary: |
+    ![Linux](icons/linux-original.svg) Linux
+    
+    ![Ubuntu](icons/ubuntu-original.svg) Ubuntu
+    
+    ![Windows](icons/windows8-original.svg) Windows

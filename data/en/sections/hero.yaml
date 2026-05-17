@@ -1,0 +1,34 @@
+section:
+  id: hero
+  enable: true
+  weight: 1
+  showOnNavbar: false
+  template: sections/hero.html
+
+title: "DevOps Engineer with 25 years of experience: from hardware to cloud"
+
+content: |
+  Automate infrastructure | Build CI/CD pipelines
+  
+  Migrate to any cloud providers | Deploy VPN solutions
+  
+  Implement monitoring | Optimize costs by up to 40%
+  
+  I design cloud architectures, moving from a background in PC building.
+  Focused on DevOps, Kubernetes, CI/CD, and cloud migration.
+  Using AI tools to solve complex problems and quickly adopt new technologies.  
+  
+  **Rate:** $40/hour  
+  **Retainer:** from $50/month  
+  **Location:** Digital Nomad  
+  **Status:** Available for new projects
+
+buttons:
+  - text: "Get a consultation →"
+    url: "https://t.me/devops_cloudadmin_bot"
+    external: true
+    style: "primary"
+  - text: "View portfolio →"
+    url: "/posts/"
+    external: false
+    style: "outline-primary"

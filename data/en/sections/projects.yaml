@@ -1,0 +1,67 @@
+section:
+  name: Featured Cases
+  id: projects
+  enable: true
+  weight: 4
+  showOnNavbar: false
+
+buttons:
+- name: All
+  filter: "all"
+- name: GitLab CI
+  filter: "gitlab"
+- name: Docker
+  filter: "docker"
+- name: Kubernetes
+  filter: "kubernetes"
+- name: Flux CD
+  filter: "fluxcd"
+- name: Helm
+  filter: "helm"
+- name: AWS
+  filter: "aws"
+- name: Yandex
+  filter: "yandex"
+- name: Terraform
+  filter: "terraform"
+- name: Ansible
+  filter: "ansible"
+- name: VPN
+  filter: "vpn"
+- name: Monitoring
+  filter: "monitoring"
+
+projects:
+- name: 🚀 CI/CD with GitLab + Kubernetes
+  url: "/posts/ci-cd-gitlab/"
+  summary: |
+    Built a complete CI/CD pipeline with GitLab CI, Docker, and Kubernetes for a startup
+    
+    **Results:**
+    - ✅ Deployment time: from 2 hours to 10 minutes
+    - ✅ Deployment errors: −90%
+    - ✅ Deployment frequency: from 1 per week to 10+ per day
+  tags: ["gitlab", "docker", "kubernetes", "fluxcd", "helm"]
+
+- name: 🕵🏻‍♂️ Prometheus + Grafana + Loki Monitoring
+  url: "/posts/monitoring-prometheus/"
+  summary: |
+    Deployed an observability stack in a Kubernetes cluster.
+    
+    **Results:**
+    - ✅ Problem detection from 30 minutes down to 1 minute
+    - ✅ Recovery time reduced by 60%
+    - ✅ Full visibility across all services
+  tags: ["kubernetes", "docker", "monitoring"]
+
+- name: 👩‍❤️‍💋‍👨 CI/CD for a Dating Service
+  url: "/posts/ci-cd-dating/"
+  summary: |
+    Built a complete DevOps stack for production launch of a Dating service (Nest.js + Angular)
+    
+    **Results:**
+    - ✅ Automatic deploy on git push
+    - ✅ Monitoring with Telegram alerts
+    - ✅ Hourly DB backups to AWS S3
+    - ✅ Full security and strict dev/prod separation
+  tags: ["gitlab", "docker", "ansible", "monitoring"]

@@ -1,0 +1,49 @@
+section:
+  name: Unique Value
+  id: usps
+  enable: true
+  weight: 2
+  showOnNavbar: false
+  template: sections/usps.html
+  hideTitle: true
+
+skills:
+- name: ☁️ Cloud & Platform Engineering
+  summary: |
+    - **Cloud migration** to AWS, GCP, Azure, Yandex Cloud, and Selectel
+    - **Kubernetes platform engineering** for production workloads
+    - **Self-hosted infrastructure** for teams that need more control and lower SaaS dependency
+    - **Infrastructure as Code** with Terraform and Ansible
+    - **CI/CD, observability, and reliability** as a single delivery stack
+
+    **Relevant for 2026:** cloud migrations, platform standardization, cost optimization, GitOps, and production reliability
+
+- name: ⚡ Fast Delivery with Proven Patterns
+  summary: |
+    - **VPN / secure access setup:** typically within hours using Ansible and Docker Compose
+    - **Self-hosted collaboration stack:** rapid deployment on clean Linux servers
+    - **Production-ready infrastructure:** from a few hours depending on scope
+    - **Kubernetes clusters:** usually delivered within days, including GitOps baseline
+    - **CI/CD pipelines:** end-to-end automation in a few days
+
+    **Approach:** reusable Ansible roles, Docker Compose, Terraform modules, and battle-tested deployment patterns
+
+- name: 🤖 Automation-First Delivery
+  summary: |
+    - **AI-assisted engineering** to speed up research, prototyping, and implementation
+    - **Faster adoption** of new tools and platforms
+    - **Generation** of code, Helm charts, and Terraform modules
+    - **Automation-first mindset** for repetitive infrastructure tasks
+    - **Human-reviewed production delivery** with focus on reliability and maintainability
+
+    **Result:** faster turnaround, better documentation, and shorter time-to-solution
+
+- name: 🔧 25 Years from Hardware to Cloud
+  summary: |
+    - From PC assembly and troubleshooting to **Cloud Architecture**
+    - From low-level systems thinking to **Kubernetes, GitOps, and modern DevOps**
+    - **Deep understanding of infrastructure across all layers**
+    - Combined **Windows and Linux** operational experience
+    - Strong communication with both technical teams and business stakeholders
+
+    **Unique value:** I spot infrastructure risks and bottlenecks that others often miss

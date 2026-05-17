@@ -1,0 +1,26 @@
+section:
+  name: Contacts
+  id: contacts
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  template: sections/hero.html
+
+title: "Get in touch"
+
+content: |
+  ## Ready to automate your infrastructure?
+  
+  Get a free consultation for your project:
+  - We discuss your goals and requirements
+  - We estimate timeline and budget
+  - I propose the optimal implementation
+    
+  **Telegram:** @devops_cloudadmin_bot  
+  **Response time: usually within 1-2 business hours**
+    
+buttons:
+  - text: "📲 Write on Telegram"
+    url: "https://t.me/devops_cloudadmin_bot"
+    external: true
+    style: "primary"

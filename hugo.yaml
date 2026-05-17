@@ -1,6 +1,7 @@
 baseURL: https://ru-admin.github.io/
-languageCode: ru-RU
-title: "DevOps-инженер & CloudAdmin"
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+title: "DevOps Engineer & CloudAdmin"
 
 module:
   imports:
@@ -22,9 +23,16 @@ module:
       target: static/fonts
 
 languages:
-  ru:
-    languageName: Русский
+  en:
+    label: English
+    locale: en-US
+    title: "DevOps Engineer & CloudAdmin"
     weight: 1
+  ru:
+    label: Русский
+    locale: ru-RU
+    title: "DevOps-инженер & CloudAdmin"
+    weight: 2
 
 markup:
   goldmark:
@@ -87,13 +95,23 @@ params:
 
     comment:
       enable: false
-      
+
     toc:
       enable: true
 
     tags:
       enable: true
       on_card: true
+
+    flags:
+      enable: true
+
+    readingTime:
+      enable: false
+
+    showDate:
+      singlePage: false
+      postCards: false
 
   footer:
     enable: true

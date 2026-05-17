@@ -1,0 +1,14 @@
+name: "DevOps Engineer and CloudAdmin"
+greeting: "25+ years of experience: from hardware to cloud → "
+image: "/icons/cloudadmin_avatar.webp"
+contactInfo:
+  telegram: "devops_cloudadmin_bot"
+  github: ru-admin
+  fl: "devops4u"
+
+summary:
+  - Automate infrastructure
+  - Build CI/CD pipelines
+  - Migrate to any cloud providers
+  - Implement monitoring
+  - Cost optimization of infrastructure

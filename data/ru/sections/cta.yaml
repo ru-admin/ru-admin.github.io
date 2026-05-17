@@ -20,7 +20,7 @@ content: |
   **Ответ в течение 1-2 часов в рабочее время**
     
 buttons:
-  - text: "📞 Написать в Telegram"
+  - text: "💬 Написать в Telegram"
     url: "https://t.me/devops_cloudadmin_bot"
     external: true
     style: "primary"
