@@ -6,7 +6,7 @@ tags: ["aws", "yandex"]
 menu:
   sidebar:
     name: "Миграция в Yandex"
-    identifier: migration-yandex-cloud
+    identifier: migration-from-aws
     weight: 20
 ---
 
