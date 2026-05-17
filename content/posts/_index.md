@@ -1,3 +1,3 @@
 ---
-title: Все кейсы | Портфолио
+title: All cases | Portfolio
 ---
