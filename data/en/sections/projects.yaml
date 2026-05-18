@@ -37,6 +37,8 @@ projects:
     - ✅ Deployment time: from 2 hours to 10 minutes
     - ✅ Deployment errors: −90%
     - ✅ Deployment frequency: from 1 per week to 10+ per day
+  target: self
+  linkTags: true
   tags: ["gitlab", "docker", "kubernetes", "fluxcd", "helm"]
 
 - name: ☁️ AWS → Cost-Optimized Private Cloud
@@ -48,6 +50,8 @@ projects:
     - ✅ Infrastructure costs: −40% reduction
     - ✅ Migration downtime: only 2 hours
     - ✅ Zero functionality loss and vendor independence
+  target: self
+  linkTags: true
   tags: ["aws", "cloud", "terraform"]
 
 - name: 🕵🏻‍♂️ Prometheus + Grafana + Loki Monitoring
@@ -59,6 +63,8 @@ projects:
     - ✅ Problem detection from 30 minutes down to 1 minute
     - ✅ Recovery time reduced by 60%
     - ✅ Full visibility across all services
+  target: self
+  linkTags: true
   tags: ["kubernetes", "docker", "monitoring"]
 
 - name: 👩‍❤️‍💋‍👨 CI/CD for a Dating Service
@@ -71,4 +77,6 @@ projects:
     - ✅ Monitoring with Telegram alerts
     - ✅ Hourly DB backups to AWS S3
     - ✅ Full security and strict dev/prod separation
+  target: self
+  linkTags: true
   tags: ["gitlab", "docker", "ansible", "monitoring"]

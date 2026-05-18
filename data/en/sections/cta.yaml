@@ -20,7 +20,7 @@ content: |
   **Response time: usually within 1-2 business hours**
     
 buttons:
-  - text: "📲 Write on Telegram"
+  - text: "💬 Write on Telegram"
     url: "https://t.me/devops_cloudadmin_bot"
     external: true
     style: "primary"
