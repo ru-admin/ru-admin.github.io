@@ -1,127 +1,93 @@
 ---
-title: "Геораспределённый кластер блокчейн-нод в Kubernetes"
-description: "Multi-region инфраструктура для ETH/BSC нод: EKS, HAProxy, HSM-подписание, GitOps, мониторинг"
+title: "Geo-Distributed Blockchain Node Cluster in Kubernetes"
+description: "Multi-region ETH/BSC node infrastructure: EKS, HAProxy, HSM signing, GitOps, monitoring"
 hero: "hero.webp"
 tags: ["kubernetes", "terraform", "helm", "flux", "vault", "prometheus", "grafana", "loki", "aws", "haproxy"]
 menu:
   sidebar:
-    name: "Блокчейн-ноды в K8s"
+    name: "Blockchain nodes in K8s"
     identifier: blockchain-k8s-cluster
-    weight: 70
+    weight: 100
+draft: true
 ---
 
-## Геораспределённый кластер блокчейн-нод в Kubernetes
-
----
-
-#### Клиент
-Криптовалютная платформа (Web3 / DeFi)
+## Geo-Distributed Blockchain Node Cluster in Kubernetes
 
 ---
 
-#### Задача
-Клиенту требовалась отказоустойчивая инфраструктура для запуска ETH и BSC full-нод в четырёх регионах (EU, US, AP, LatAm) с минимальной задержкой для конечных пользователей, защитой от DDoS и спама на RPC, безопасным HSM-подписанием транзакций и централизованным мониторингом. Синхронизация нод с нуля занимает 2–3 недели — требовалось решение для быстрого старта.
+#### Client
+Cryptocurrency platform (Web3 / DeFi)
 
 ---
 
-#### Решение
+#### Challenge
+The client needed fault-tolerant infrastructure to run ETH and BSC full nodes across four regions (EU, US, AP, LatAm) with minimal latency for end users, DDoS and RPC spam protection, secure HSM-based transaction signing, and centralized observability. Cold node sync takes 2–3 weeks — a fast-bootstrap solution was required.
 
-###### 1. Инфраструктура и IaC (Terraform + EKS)
-- Terraform-модули: VPC, subnets, security groups для 4 регионов (Frankfurt, Virginia, Singapore, São Paulo)
-- Managed Kubernetes (EKS 1.29+) per region с выделенными node pools: full nodes, archive nodes, signing service
-- NVMe StorageClass (gp3) через CSI-драйвер для высокопроизводительного хранения chaindata
-- Helm chart для geth / bsc-node с кастомными values per region
+---
 
-###### 2. GitOps: Flux CD multi-cluster
-- Flux CD v2 с `Kustomization` per region — единый источник истины для всех кластеров
+#### Solution
+
+###### 1. Infrastructure & IaC (Terraform + EKS)
+- Terraform modules: VPC, subnets, security groups for 4 regions (Frankfurt, Virginia, Singapore, São Paulo)
+- Managed Kubernetes (EKS 1.29+) per region with dedicated node pools: full nodes, archive nodes, signing service
+- NVMe StorageClass (gp3) via CSI driver for high-performance chaindata storage
+- Helm charts for geth / bsc-node with per-region custom values
+
+###### 2. GitOps: Flux CD Multi-Cluster
+- Flux CD v2 with `Kustomization` per region — single source of truth for all clusters
 - Secrets management: HashiCorp Vault + External Secrets Operator (ESO)
-- Изменения в инфраструктуре применяются через git push без прямого доступа к кластерам
+- All infrastructure changes applied via git push — no direct cluster access required
 
-###### 3. Балансировка и Anti-Spam
-- HAProxy 2.8: sticky sessions, health checks по `eth_syncing` — трафик только к синхронизированным нодам
-- Nginx Ingress: rate limiting, IP reputation filtering (Lua-скрипты в стиле fail2ban)
-- Cloudflare Workers: geo-routing + защита от DDoS L7
-- Custom sidecar (Go): health endpoint, который возвращает ready только при полной синхронизации ноды
+###### 3. Load Balancing & Anti-Spam
+- HAProxy 2.8: sticky sessions, health checks via `eth_syncing` — traffic routed only to fully synced nodes
+- Nginx Ingress: rate limiting, IP reputation filtering (Lua-based, fail2ban-style)
+- Cloudflare Workers: geo-routing + L7 DDoS protection
+- Custom Go sidecar: health endpoint returns `ready` only when node is fully synced
 
-###### 4. HSM-интеграция для подписания транзакций
-- AWS CloudHSM (prod) / YubiHSM2 (staging) для хранения приватных ключей
-- Go-микросервис с PKCS#11 абстракцией — смена HSM-вендора без переписывания кода
-- Изолированный K8s namespace + NetworkPolicy: нет egress кроме HSM endpoint
-- gRPC API для backend: sign tx, get pubkey
-- Аудит-лог всех операций подписания → Loki
+###### 4. HSM Integration for Transaction Signing
+- AWS CloudHSM (prod) / YubiHSM2 (staging) for private key storage
+- Go microservice with PKCS#11 abstraction — swap HSM vendor without rewriting code
+- Isolated K8s namespace + NetworkPolicy: no egress except to HSM endpoint
+- gRPC API for backend: sign tx, get pubkey
+- Full audit log of all signing operations → Loki
 
-###### 5. Мониторинг и алертинг
+###### 5. Monitoring & Alerting
 - Custom Prometheus exporter (Go): `eth_blockNumber`, `eth_syncing`, peer count per node
 - Grafana dashboards: sync lag, block height per region, RPC latency, SLO 99.9%
-- Alertmanager → PagerDuty: алерты на block lag > N блоков, node down, peer count < threshold
-- Loki + Promtail: структурированные логи всех нод с корреляцией по region/pod
+- Alertmanager → PagerDuty: alerts on block lag > N blocks, node down, peer count below threshold
+- Loki + Promtail: structured logs from all nodes with region/pod correlation
 
-###### 6. Операционка и Disaster Recovery
-- Snapshot bootstrap: chaindata из S3 через rclone — нода готова за часы вместо недель
-- DR playbook: пошаговые runbook'и для восстановления региона
-- Chaos Engineering (Chaos Mesh): тесты на node kill, network partition, pod failure
-- Architecture Decision Records (ADR) для всех ключевых решений
-
----
-
-#### Технологии
-{{< split 2 2 2 2 2 2 >}}
-<div style="text-align: center;">
-
-![Kubernetes](/icons/kubernetes-plain.svg)
-
-<div>Kubernetes</div></div>
-
----
-<div style="text-align: center;">
-
-![Terraform](/icons/terraform-original.svg)
-
-<div>Terraform</div></div>
-
----
-<div style="text-align: center;">
-
-![Helm](/icons/helm-original.svg)
-
-<div>Helm</div></div>
-
----
-<div style="text-align: center;">
-
-![Flux CD](/icons/flux-cd.svg)
-
-<div>Flux CD</div></div>
-
----
-<div style="text-align: center;">
-
-![Prometheus](/icons/prometheus-original.svg)
-
-<div>Prometheus</div></div>
-
----
-<div style="text-align: center;">
-
-![Grafana](/icons/grafana-original.svg)
-
-<div>Grafana</div></div>
-
-{{< /split >}}
+###### 6. Operations & Disaster Recovery
+- Snapshot bootstrap: chaindata from S3 via rclone — node ready in hours instead of weeks
+- DR playbook: step-by-step runbooks for regional recovery
+- Chaos Engineering (Chaos Mesh): node kill, network partition, pod failure tests
+- Architecture Decision Records (ADR) for all key design choices
 
 ---
 
-#### Результаты
-✅ **Geo-routing:** задержка снижена за счёт маршрутизации к ближайшему региону  
-✅ **Быстрый старт:** нода готова за часы через snapshot из S3 вместо 2–3 недель синхронизации  
-✅ **Anti-spam:** rate limiting + IP reputation — публичный RPC выдерживает нагрузку ботов  
-✅ **HSM:** приватные ключи никогда не покидают аппаратный модуль  
-✅ **GitOps:** любое изменение инфраструктуры — через git, полный audit trail  
-✅ **SLO 99.9%:** отслеживается в Grafana, алерты в PagerDuty при деградации  
+#### Technologies
+<div class="row">
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/kubernetes-plain.svg" alt="Kubernetes"><div>Kubernetes</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/terraform-original.svg" alt="Terraform"><div>Terraform</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/helm-original.svg" alt="Helm"><div>Helm</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/flux-cd.svg" alt="Flux CD"><div>Flux CD</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/prometheus-original.svg" alt="Prometheus"><div>Prometheus</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/grafana-original.svg" alt="Grafana"><div>Grafana</div></div>
+</div>
 
 ---
 
-#### Архитектура
+#### Results
+✅ **Geo-routing:** latency reduced by routing users to the nearest region  
+✅ **Fast bootstrap:** node ready in hours via S3 snapshot instead of 2–3 weeks of sync  
+✅ **Anti-spam:** rate limiting + IP reputation — public RPC handles bot load without degradation  
+✅ **HSM:** private keys never leave the hardware module  
+✅ **GitOps:** every infrastructure change goes through git with a full audit trail  
+✅ **SLO 99.9%:** tracked in Grafana, PagerDuty alerts on any degradation  
+
+---
+
+#### Architecture
 {{< mermaid align="center" >}}
 graph TB
     A[Clients] --> B[Cloudflare / Route53]
@@ -149,10 +115,10 @@ graph TB
 
 ---
 
-#### Длительность
-250 часов (≈ 10–12 недель)
+#### Duration
+250 hours (≈ 10–12 weeks)
 
 ---
 
-#### Стоимость
-от 625 000 ₽
+#### Cost
+from $7,500
