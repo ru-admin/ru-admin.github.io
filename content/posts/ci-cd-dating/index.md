@@ -1,130 +1,95 @@
 ---
-title: "CI/CD и инфраструктура для Dating-сервиса"
-description: "Полный DevOps-стек для продакшен запуска: Docker, GitLab CI/CD, мониторинг, бэкапы"
+title: "CI/CD & Production Infrastructure for a Social App"
+description: "Full production DevOps stack from scratch: Docker, GitLab CI/CD, monitoring, automated backups"
 hero: "hero.webp"
 tags: ["gitlab", "docker", "ansible", "prometheus", "nginx", "postgresql"]
 menu:
   sidebar:
-    name: "CI/CD Dating-сервис"
+    name: "CI/CD Dating service"
     identifier: cicd-dating-service
     weight: 60
 ---
 
-## Инфраструктура и CI/CD для продакшен запуска Dating-сервиса
+## Production Infrastructure & CI/CD for a Social App Launch
 
 ---
 
-#### Клиент
-Dating-сервис Puzzle Master
+#### Client
+Puzzle Master — a social matching platform
 
 ---
 
-#### Задача
-Стартап разработал бэкенд на Nest.js + фронтенд на Angular и был готов к запуску, но не имел никакой инфраструктуры: деплой был ручным, не было CI/CD, мониторинга, бэкапов и разделения dev/prod окружений. Требовалось выстроить полный DevOps-стек с нуля под продакшен.
+#### Challenge
+The startup had a production-ready Nest.js backend and Angular frontend, but zero infrastructure: deployments were manual, there was no CI/CD, no monitoring, no backups, and no separation between dev and prod environments. The goal was to build a complete DevOps stack from scratch before the public launch.
 
 ---
 
-#### Решение
+#### Solution
 
-###### 1. Контейнеризация приложения
-- Multi-stage Dockerfile для backend (Nest.js + Prisma, non-root пользователь)
-- Multi-stage Dockerfile для frontend (Angular 12, legacy OpenSSL, Nginx для статики)
-- Docker Compose с полным стеком: PostgreSQL 15, Redis 7, imgproxy, Nginx
-- Healthchecks и depends_on для правильного порядка запуска
-- Раздельные окружения dev и prod в /opt/dev и /opt/prod
+###### 1. Application Containerization
+- Multi-stage Dockerfile for backend (Nest.js + Prisma, non-root user)
+- Multi-stage Dockerfile for frontend (Angular 12, legacy OpenSSL, Nginx for static assets)
+- Docker Compose full stack: PostgreSQL 15, Redis 7, imgproxy, Nginx
+- Healthchecks and `depends_on` for correct startup ordering
+- Isolated dev and prod environments in `/opt/dev` and `/opt/prod`
 
 ###### 2. GitLab CI/CD
-- Миграция репозиториев с Bitbucket на GitLab
-- Пайплайны для backend и frontend: build → push → deploy
-- GitLab Container Registry для хранения Docker образов
-- Автоматический деплой в dev, ручной trigger для prod
-- SSH деплой на VPS через SSH_PRIVATE_KEY
+- Migration of repository from Bitbucket to GitLab
+- Pipeline for backend and frontend: build → push → deploy
+- GitLab Container Registry for Docker image storage
+- Automatic deploy to dev on every push; manual trigger for prod
+- SSH deployment to VPS via `SSH_PRIVATE_KEY`
 
 ###### 3. Nginx Reverse Proxy
-- Универсальный конфиг через envsubst для dev/prod
-- SSL/TLS (TLSv1.2, TLSv1.3) с сертификатами Cloudflare
-- Проксирование /api/* → backend:4000, /* → frontend:80
-- Редирект www → основной домен (301)
-- Отдельный стек imgproxy с SSL терминацией на img.pm.life
+- Environment-agnostic config via `envsubst` for dev/prod parity
+- SSL/TLS (TLSv1.2, TLSv1.3) with Cloudflare certificates
+- Routing: `/api/*` → backend:4000, `/*` → frontend:80
+- www → root domain redirect (301)
+- Separate imgproxy stack with SSL termination
 
-###### 4. Безопасность (Ansible)
-- Настройка сервера через Ansible: SSH только по ключам, отключён root
-- UFW Firewall: открыты только порты 80, 443, кастомный SSH
-- Доступ к БД только через SSH Tunnel (Beekeeper Studio)
-- Секреты в переменных GitLab CI/CD
+###### 4. Security (Ansible)
+- Server hardening via Ansible: SSH key-only auth, root login disabled
+- UFW Firewall: only ports 80, 443, and custom SSH open
+- Database accessible only via SSH tunnel
+- All secrets stored in GitLab CI/CD variables
 
-###### 5. Мониторинг
-- Prometheus + Grafana с автоматическим провижинингом дашбордов
+###### 5. Monitoring
+- Prometheus + Grafana with automated dashboard provisioning
 - Exporters: Node, cAdvisor, Postgres, Redis, Nginx, Blackbox
-- 5 Grafana дашбордов: сервер, Docker контейнеры, PostgreSQL, Redis, Nginx
-- Alertmanager с интеграцией в Telegram, алерты на CPU/RAM/Disk/API/SSL
+- 5 Grafana dashboards: server, Docker containers, PostgreSQL, Redis, Nginx
+- Alertmanager with Slack/webhook integration; alerts on CPU/RAM/Disk/API/SSL
 
-###### 6. Бэкапы БД
-- Автоматический pg_dump каждый час
-- Сжатие gzip и загрузка в Cloudflare R2 (S3-compatible)
-- Prometheus метрики бэкапов: успех, размер, timestamp
-- Алерты: DatabaseBackupMissing, DatabaseBackupFailed, DatabaseBackupSizeAnomaly
-
----
-
-#### Технологии
-{{< split 2 2 2 2 2 2 >}}
-<div style="text-align: center;">
-
-![GitLab](/icons/gitlab-original.svg)
-
-<div>GitLab CI</div></div>
-
----
-<div style="text-align: center;">
-
-![Docker](/icons/docker-original.svg)
-
-<div>Docker</div></div>
-
----
-<div style="text-align: center;">
-
-![Ansible](/icons/ansible-original.svg)
-
-<div>Ansible</div></div>
-
----
-<div style="text-align: center;">
-
-![Prometheus](/icons/prometheus-original.svg)
-
-<div>Prometheus</div></div>
-
----
-<div style="text-align: center;">
-
-![Nginx](/icons/nginx.svg)
-
-<div>Nginx</div></div>
-
----
-<div style="text-align: center;">
-
-![PostgreSQL](/icons/postgresql.svg)
-
-<div>PostgreSQL</div></div>
-
-{{< /split >}}
+###### 6. Database Backups
+- Automated `pg_dump` every hour
+- gzip compression and upload to S3-compatible object storage (Cloudflare R2)
+- Prometheus backup metrics: success status, size, timestamp
+- Alerts: `DatabaseBackupMissing`, `DatabaseBackupFailed`, `DatabaseBackupSizeAnomaly`
 
 ---
 
-#### Результаты
-✅ **Деплой:** git push в main → автоматическая сборка и деплой на сервер  
-✅ **Окружения:** полное разделение dev и prod на одном VPS  
-✅ **Мониторинг:** 5 дашбордов, алерты в Telegram по 6 категориям  
-✅ **Бэкапы:** автоматический pg_dump каждый час в Cloudflare R2  
-✅ **Безопасность:** UFW, SSH по ключам, БД закрыта извне  
-✅ **Масштабируемость:** архитектура готова к выносу БД на отдельный сервер  
+#### Technologies
+<div class="row">
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/gitlab-original.svg" alt="GitLab"><div>GitLab CI</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/docker-original.svg" alt="Docker"><div>Docker</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/ansible-original.svg" alt="Ansible"><div>Ansible</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/prometheus-original.svg" alt="Prometheus"><div>Prometheus</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/nginx.svg" alt="Nginx"><div>Nginx</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/postgresql.svg" alt="PostgreSQL"><div>PostgreSQL</div></div>
+</div>
 
 ---
 
-#### Архитектура
+#### Results
+✅ **Deploy:** git push to main → automatic build and deploy to server  
+✅ **Environments:** full dev/prod isolation on a single VPS  
+✅ **Monitoring:** 5 dashboards, alerts across 6 categories  
+✅ **Backups:** automated hourly `pg_dump` to Cloudflare R2  
+✅ **Security:** UFW, key-based SSH, database inaccessible from outside  
+✅ **Scalability:** architecture ready for database extraction to a dedicated server  
+
+---
+
+#### Architecture
 {{< mermaid align="center" >}}
 graph TB
     A[git push] --> B[GitLab CI/CD]
@@ -135,7 +100,7 @@ graph TB
     E --> G[Frontend Angular]
     F --> H[PostgreSQL]
     F --> I[Redis]
-    E --> J[imgproxy img.pm.life]
+    E --> J[imgproxy]
     J --> K[Cloudflare R2]
     L[Prometheus] --> F
     L --> H
@@ -143,15 +108,15 @@ graph TB
     L --> E
     L --> M[Grafana]
     L --> N[Alertmanager]
-    N --> O[Telegram]
+    N --> O[Slack / Webhook]
 {{< /mermaid >}}
 
 ---
 
-#### Длительность
-42 часа (Docker, CI/CD, мониторинг, алертинг, бэкапы, документация)
+#### Duration
+42 hours (Docker, CI/CD, monitoring, alerting, backups, documentation)
 
 ---
 
-#### Стоимость
-от 105 000 ₽
+#### Cost
+from $1,300
