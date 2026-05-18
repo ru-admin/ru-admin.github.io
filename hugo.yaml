@@ -11,8 +11,8 @@ module:
       target: static/images
     # - source: static/files
       # target: static/files
-    # - source: static/icons
-      # target: static/icons
+    - source: assets/icons
+      target: static/icons
     - source: assets
       target: assets
     - source: ./node_modules/flag-icon-css/flags
