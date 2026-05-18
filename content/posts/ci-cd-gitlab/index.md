@@ -36,38 +36,13 @@ E-commerce startup, 5-person engineering team
 ---
 
 #### Technologies
-{{< split 2 2 2 2 2 2 >}}
-<div style="text-align: center;">
-
-![GitLab](/icons/gitlab-original.svg)
-
-<div>GitLab</div></div>
-
----
-<div style="text-align: center;">
-
-![Docker](/icons/docker-original.svg)
-<div>Docker</div></div>
-
----
-<div style="text-align: center;">
-
-![Kubernetes](/icons/kubernetes-plain.svg)
-<div>Kubernetes</div></div>
-
----
-<div style="text-align: center;">
-
-![Helm](/icons/helm-original.svg)
-<div>Helm</div></div>
-
----
-<div style="text-align: center;">
-
-![Flux CD](/icons/flux-cd.svg)
-<div>Flux CD</div></div>
-
-{{< /split >}}
+<div class="row">
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/gitlab-original.svg" alt="GitLab"><div>GitLab</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/docker-original.svg" alt="Docker"><div>Docker</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/kubernetes-plain.svg" alt="Kubernetes"><div>Kubernetes</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/helm-original.svg" alt="Helm"><div>Helm</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/flux-cd.svg" alt="Flux CD"><div>Flux CD</div></div>
+</div>
 
 ---
 

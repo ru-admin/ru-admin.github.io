@@ -54,44 +54,13 @@ menu:
 ---
 
 #### Технологии
-{{< split 2 2 2 2 2 2 >}}
-<div style="text-align: center;">
-
-![AWS](/icons/aws.svg)
-
-<div>AWS</div></div>
-
----
-<div style="text-align: center;">
-
-![Yandex Cloud](/icons/yandex.svg)
-<div>Yandex Cloud</div></div>
-
----
-<div style="text-align: center;">
-
-![Terraform](/icons/terraform-original.svg)
-<div>Terraform</div></div>
-
----
-<div style="text-align: center;">
-
-![Prometheus](/icons/prometheus-original.svg)
-<div>Prometheus</div></div>
-
----
-<div style="text-align: center;">
-
-![Grafana](/icons/grafana-original.svg)
-<div>Grafana</div></div>
-
----
-<div style="text-align: center;">
-
-![GitLab CI](/icons/gitlab-original.svg)
-<div>GitLab CI</div></div>
-{{< /split >}}
-
+<div class="row">
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/aws.svg" alt="AWS"><div>AWS</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/terraform-original.svg" alt="Terraform"><div>Terraform</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/prometheus-original.svg" alt="Prometheus"><div>Prometheus</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/grafana-original.svg" alt="Grafana"><div>Grafana</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/gitlab-original.svg" alt="GitLab CI"><div>GitLab CI</div></div>
+</div>
 
 ---
 
