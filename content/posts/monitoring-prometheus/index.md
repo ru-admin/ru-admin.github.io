@@ -1,140 +1,109 @@
 ---
-title: "Мониторинг Prometheus + Grafana"
-description: "Внедрение полноценного observability стека для микросервисной архитектуры"
+title: "Prometheus + Grafana Monitoring Stack"
+description: "Full observability stack implementation for microservices architecture"
 hero: "hero.webp"
 tags: ["kubernetes", "docker", "prometheus", "grafana", "monitoring"]
 menu:
   sidebar:
-    name: "Мониторинг Prometheus"
+    name: "Prometheus monitoring"
     identifier: monitoring-prometheus-grafana
     weight: 40
 ---
 
-## Observability стек для микросервисной архитектуры
+## Observability Stack for Microservices Architecture
 
 ---
 
-#### Клиент
-Начинающий стартап
+#### Client
+Early-stage startup
 
 ---
 
-#### Задача
-Компания перешла на микросервисную архитектуру (15+ сервисов), но не имела централизованного мониторинга. Проблемы обнаруживались только по жалобам пользователей через 30+ минут. Требовалось внедрить полноценный observability стек для быстрого выявления и диагностики проблем.
+#### Challenge
+After migrating to a microservices architecture (15+ services), the team had no centralized monitoring in place. Issues were only discovered through user complaints — typically 30+ minutes after they occurred. A full observability stack was needed to detect and diagnose problems proactively.
 
 ---
 
-#### Решение
+#### Solution
 
-###### 1. Архитектура мониторинга
+###### 1. Monitoring Architecture
+- **Prometheus** for metrics collection
+- **Grafana** for visualization
+- **Loki** for centralized log aggregation
+- **Jaeger** for distributed tracing
+- **Alertmanager** for notifications
 
-- **Prometheus** для сбора метрик
-- **Grafana** для визуализации
-- **Loki** для централизованных логов
-- **Jaeger** для distributed tracing
-- **Alertmanager** для уведомлений
+###### 2. Metrics Collection
+- Automatic service discovery in Kubernetes
+- Application-level custom metrics
+- System metrics via node-exporter
+- Database metrics via postgres-exporter and redis-exporter
 
-###### 2. Сбор метрик
-- Автоматическое обнаружение сервисов в Kubernetes
-- Метрики приложений (custom metrics)
-- Системные метрики (node-exporter)
-- Метрики БД (postgres-exporter, redis-exporter)
+###### 3. Grafana Dashboards
+- Per-service dashboards for each microservice
+- Unified infrastructure overview dashboard
+- SLA/SLO tracking metrics
+- Business metrics (RPS, conversion rate)
 
-###### 3. Визуализация в Grafana
-- Дашборды для каждого микросервиса
-- Общий дашборд инфраструктуры
-- SLA/SLO метрики
-- Business метрики (RPS, конверсия)
-
-###### 4. Централизованные логи (Loki)
-- Агрегация логов всех сервисов
-- Поиск по логам через Grafana
-- Корреляция логов с метриками
+###### 4. Centralized Logging (Loki)
+- Log aggregation across all services
+- Full-text log search via Grafana
+- Log-to-metric correlation
 
 ###### 5. Distributed Tracing (Jaeger)
-- Трейсинг HTTP запросов между сервисами
-- Визуализация цепочек вызовов
-- Поиск узких мест (bottlenecks)
-- Анализ latency по сервисам
+- HTTP request tracing across services
+- Call chain visualization
+- Bottleneck identification
+- Per-service latency analysis
 
-###### 6. Алертинг
-- Алерты в Telegram
-- Эскалация критичных проблем
-- On-call ротация
-- Автоматическое создание инцидентов
-
----
-
-#### Технологии
-{{< split 2 2 2 2 2 2 >}}
-<div style="text-align: center;">
-
-![Prometheus](/icons/prometheus-original.svg)
-
-<div>Prometheus</div></div>
-
----
-<div style="text-align: center;">
-
-![Grafana](/icons/grafana-original.svg)
-<div>Grafana</div></div>
-
----
-<div style="text-align: center;">
-
-![Kubernetes](/icons/kubernetes-plain.svg)
-<div>Kubernetes</div></div>
-
----
-<div style="text-align: center;">
-
-![Docker](/icons/docker-original.svg)
-<div>Docker</div></div>
-
----
-<div style="text-align: center;">
-
-![Helm](/icons/helm-original.svg)
-<div>Helm</div></div>
-
----
-<div style="text-align: center;">
-
-![Linux](/icons/linux-original.svg)
-<div>Linux</div></div>
-
-{{< /split >}}
+###### 6. Alerting
+- Alerts delivered to Slack / PagerDuty / custom webhooks
+- Critical issue escalation
+- On-call rotation support
+- Automatic incident creation
 
 ---
 
-#### Результаты
-✅ **MTTD:** обнаружение проблем с 30 минут до 1 минуты  
-✅ **MTTR:** время восстановления сократилось на 60%  
-✅ **Алерты:** автоматические уведомления в Telegram  
-✅ **Visibility:** полная прозрачность работы всех сервисов  
-✅ **Capacity planning:** данные для планирования ресурсов  
+#### Technologies
+<div class="row">
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/prometheus-original.svg" alt="Prometheus"><div>Prometheus</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/grafana-original.svg" alt="Grafana"><div>Grafana</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/kubernetes-plain.svg" alt="Kubernetes"><div>Kubernetes</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/docker-original.svg" alt="Docker"><div>Docker</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/helm-original.svg" alt="Helm"><div>Helm</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/linux-original.svg" alt="Linux"><div>Linux</div></div>
+</div>
 
 ---
 
-#### Архитектура
+#### Results
+✅ **MTTD:** reduced from 30 minutes to under 1 minute  
+✅ **MTTR:** recovery time reduced by 60%  
+✅ **Alerts:** proactive notifications before users are impacted  
+✅ **Visibility:** full observability across all services  
+✅ **Capacity planning:** data-driven resource forecasting  
+
+---
+
+#### Architecture
 {{< mermaid align="center" >}}
 graph LR
-    A[Микросервисы] --> B[Prometheus]
+    A[Microservices] --> B[Prometheus]
     A --> C[Loki]
     A --> D[Jaeger]
     B --> E[Grafana]
     C --> E
     D --> E
     E --> F[Alertmanager]
-    F --> G[Telegram]
+    F --> G[Slack / PagerDuty]
 {{< /mermaid >}}
 
 ---
 
-#### Длительность
-1 неделя (настройка + дашборды + алерты)
+#### Duration
+1 week (setup + dashboards + alerting)
 
 ---
 
-#### Стоимость
-от 80 000 ₽
+#### Cost
+from $1,000
