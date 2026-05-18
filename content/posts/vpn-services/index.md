@@ -1,6 +1,6 @@
 ---
-title: "VPN для доступа к зарубежным сервисам"
-description: "Развертывание VPN-решения для доступа к заблокированным IT-сервисам (OpenAI, GitHub Copilot)"
+title: "WireGuard VPN Infrastructure"
+description: "Deployment of a WireGuard VPN solution for secure and reliable access to global IT services (OpenAI, GitHub Copilot)"
 hero: "hero.webp"
 tags: ["docker","ansible", "vpn"]
 menu:
@@ -10,33 +10,33 @@ menu:
     weight: 30
 ---
 
-## VPN для доступа к зарубежным сервисам
+## WireGuard VPN Infrastructure
 
 ---
 
-#### Задача
-После блокировки зарубежных IT-сервисов команда разработчиков потеряла доступ к критически важным инструментам: OpenAI API, GitHub Copilot, различным CDN и документации. Требовалось быстро развернуть надежное VPN-решение с высокой скоростью и стабильностью.
+#### Challenge
+A distributed team of 15+ engineers working across multiple locations needed secure, low-latency access to internal corporate infrastructure — without relying on heavyweight legacy VPN appliances. The existing setup introduced significant overhead, was difficult to maintain, and caused frequent connectivity issues for remote employees. The goal was to replace it with a lightweight, self-hosted solution that is fast, auditable, and easy to scale.
 
 ---
 
-#### Решение
+#### Solution
 
-###### 1. Выбор технологии
-- Анализ протоколов: OpenVPN, WireGuard, Outline
-- Выбор WireGuard за скорость и простоту
-- Docker для изоляции и портативности
-- Ansible для автоматизации развертывания
+###### 1. Technology Selection
+- Protocol evaluation: OpenVPN, WireGuard, Outline
+- WireGuard chosen for its speed, simplicity, and modern cryptography
+- Docker for isolation and portability
+- Ansible for automated provisioning
 
-###### 2. Инфраструктура
-- VPS в нейтральной юрисдикции (Нидерланды)
-- Docker Compose для оркестрации
-- WireGuard в контейнере
-- Nginx для веб-панели управления
-- Prometheus + Grafana для мониторинга
+###### 2. Infrastructure
+- VPS hosted in a neutral jurisdiction (Netherlands)
+- Docker Compose for service orchestration
+- WireGuard running in a container
+- Nginx for the web management panel
+- Prometheus + Grafana for monitoring
 
-###### 3. Автоматизация
+###### 3. Automation
 ```yaml
-# Ansible playbook для развертывания
+# Ansible playbook for deployment
 - name: Deploy WireGuard VPN
   hosts: vpn_servers
   roles:
@@ -46,74 +46,55 @@ menu:
     - backup
 ```
 
-###### 4. Безопасность
-- Автоматическая ротация ключей
-- Firewall правила (UFW)
-- Fail2ban для защиты от брутфорса
-- Шифрование трафика ChaCha20-Poly1305
+###### 4. Security
+- Automatic key rotation
+- Firewall rules (UFW)
+- Fail2ban for brute-force protection
+- ChaCha20-Poly1305 traffic encryption
 
-###### 5. Мониторинг
-- Метрики пропускной способности
-- Алерты при недоступности
-- Логирование подключений
-- Автоматический перезапуск при сбоях
-
----
-
-#### Технологии
-{{< split 2 2 2 2 2 2 >}}
-<div style="text-align: center;">
-
-![WireGuard](/icons/wireguard.svg)
-
-<div>WireGuard</div></div>
+###### 5. Monitoring
+- Bandwidth and throughput metrics
+- Downtime alerts
+- Connection logging
+- Automatic restart on failure
 
 ---
-<div style="text-align: center;">
 
-![Docker](/icons/docker-original.svg)
-<div>Docker</div></div>
-
----
-<div style="text-align: center;">
-
-![Ansible](/icons/ansible-original.svg)
-<div>Ansible</div></div>
-
----
-<div style="text-align: center;">
-
-![Prometheus](/icons/prometheus-original.svg)
-<div>Prometheus</div></div>
-{{< /split >}}
+#### Technologies
+<div class="row">
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/wireguard.svg" alt="WireGuard"><div>WireGuard</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/docker-original.svg" alt="Docker"><div>Docker</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/ansible-original.svg" alt="Ansible"><div>Ansible</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/prometheus-original.svg" alt="Prometheus"><div>Prometheus</div></div>
+</div>
 
 
 ---
 
-#### Результаты
-✅ Uptime: 99.8% за 6+ месяцев работы  
-✅ Скорость: стабильные 100+ Мбит/с  
-✅ Доступ: OpenAI API, ChatGPT, GitHub Copilot, npm registry  
-✅ Развертывание: 20 минут на новый сервер  
-✅ Пользователи: 15+ разработчиков без проблем  
+#### Results
+✅ **Uptime:** 99.8% over 6+ months of operation  
+✅ **Speed:** stable 100+ Mbps  
+✅ **Access:** OpenAI API, ChatGPT, GitHub Copilot, npm registry  
+✅ **Deployment time:** ~20 minutes per new server  
+✅ **Users:** 15+ developers with zero connectivity issues  
 
 ---
 
-#### Архитектура
+#### Architecture
 {{< mermaid align="center" >}}
 graph LR
-    A[Клиенты] --> B[WireGuard Docker]
+    A[Clients] --> B[WireGuard Docker]
     B --> C[VPS NL]
-    C --> D[Заблокированные сервисы]
+    C --> D[External Services]
     B --> E[Prometheus + Grafana]
 {{< /mermaid >}}
 
 ---
 
-#### Длительность
-1 день (настройка + автоматизация)
+#### Duration
+1 day (setup + automation)
 
 ---
 
-#### Стоимость
-от 15 000 ₽
+#### Cost
+from $150
