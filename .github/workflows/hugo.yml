@@ -27,18 +27,24 @@ jobs:
         hugo-version: 'latest'
         extended: true
 
-    - name: Update Hugo Modules
-      run: hugo mod tidy
-
     - name: Setup Node
       uses: actions/setup-node@v6
       with:
-        node-version: 18
+        node-version: 20
+
+    - name: Update Hugo modules
+      run: |
+        # update to latest version of all modules
+        hugo mod get -u
+
+        # update the npm dependencies
+        hugo mod npm pack
+
+        # cleanup go.sum file
+        hugo mod tidy
 
     - name: Install node modules
-      run: |
-        hugo mod npm pack
-        npm install
+      run: npm install
 
     - name: Build
       run: hugo --minify
