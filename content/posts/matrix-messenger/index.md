@@ -1,125 +1,94 @@
 ---
-title: "Корпоративный мессенджер Matrix"
-description: "Развертывание собственного защищенного мессенджера для компании"
+title: "Self-Hosted Corporate Messenger (Matrix)"
+description: "Deployment of a secure self-hosted messaging platform for enterprise communications"
 hero: "hero.webp"
 tags: ["matrix", "docker", "caddy", "postgresql", "element"]
 menu:
   sidebar:
-    name: "Matrix мессенджер"
+    name: "Matrix messenger"
     identifier: matrix-messenger
     weight: 50
 ---
 
-## Альтернатива Telegram для корпоративных коммуникаций
+## Self-Hosted Secure Messenger for Enterprise Communications
 
 ---
 
-#### Клиент
-Средний бизнес с требованиями к безопасности данных
+#### Client
+Mid-size business with strict data privacy and security requirements
 
 ---
 
-#### Задача
-Компания нуждалась в собственном защищенном мессенджере из-за требований безопасности и необходимости полного контроля над корпоративными коммуникациями. Требовалось решение с шифрованием, видеозвонками и интеграцией с корпоративной инфраструктурой.
+#### Challenge
+The company required full control over its internal communications — no third-party servers, no data leakage risks. The solution had to support end-to-end encryption, voice and video calls, file sharing, and seamless integration with existing corporate infrastructure, all manageable by an internal team.
 
 ---
 
-#### Решение
+#### Solution
 
-###### 1. Серверная часть
-- **Matrix Synapse** как основной сервер
-- **PostgreSQL 16** для хранения данных
-- **Caddy** как reverse proxy с автоматическим SSL
-- **Docker Compose** для оркестрации всех сервисов
+###### 1. Server Stack
+- **Matrix Synapse** as the core messaging server
+- **PostgreSQL 16** for persistent data storage
+- **Caddy** as reverse proxy with automatic SSL/TLS
+- **Docker Compose** for service orchestration
 
-###### 2. Клиентские приложения
-- **Element Web** для браузера
-- **Element Desktop** для Windows/macOS/Linux
-- **Element Mobile** для iOS/Android
-- Единый интерфейс на всех платформах
+###### 2. Client Applications
+- **Element Web** for browser access
+- **Element Desktop** for Windows/macOS/Linux
+- **Element Mobile** for iOS/Android
+- Consistent interface across all platforms
 
-###### 3. Видеозвонки
-- **Coturn** (TURN/STUN сервер) для NAT traversal
-- Поддержка групповых видеозвонков
-- UDP порты 49160-49200 для медиа-трафика
-- Автоматическая конфигурация через переменные окружения
+###### 3. Voice & Video Calls
+- **Coturn** (TURN/STUN server) for NAT traversal
+- Group video call support
+- UDP ports 49160–49200 for media traffic
+- Automatic configuration via environment variables
 
-###### 4. Администрирование
-- **Synapse Admin** - веб-интерфейс управления
-- Управление пользователями и комнатами
-- Статистика и мониторинг
-- Доступ через отдельный порт 8888
+###### 4. Administration
+- **Synapse Admin** web UI for user and room management
+- Usage statistics and monitoring
+- Accessible on a dedicated port (8888)
 
-###### 5. Безопасность
-- End-to-end шифрование сообщений
-- Автоматические SSL/TLS сертификаты через Caddy
-- Отключена публичная регистрация
-- Федерация с другими Matrix серверами
-- Healthcheck для всех сервисов
+###### 5. Security
+- End-to-end encrypted messages
+- Automatic SSL/TLS certificates via Caddy
+- Public registration disabled
+- Optional federation with other Matrix servers
+- Healthchecks on all services
 
-###### 6. Автоматизация
-- Bash скрипт для полной инициализации
-- Автоматическая генерация конфигурации Synapse
-- Автоматическое создание admin пользователя через expect
-- Docker Compose с зависимостями и healthchecks
-
----
-
-#### Технологии
-{{< split 2 2 2 2 2 2 >}}
-<div style="text-align: center;">
-
-![Docker](/icons/docker-original.svg)
-
-<div>Docker</div></div>
-
----
-<div style="text-align: center;">
-
-![PostgreSQL](/icons/postgresql.svg)
-<div>PostgreSQL</div></div>
-
----
-<div style="text-align: center;">
-
-![Caddy](/icons/caddy.svg)
-<div>Caddy</div></div>
-
----
-<div style="text-align: center;">
-
-![Bash](/icons/bash.svg)
-<div>Bash</div></div>
-
----
-<div style="text-align: center;">
-
-![Linux](/icons/linux-original.svg)
-<div>Linux</div></div>
-
----
-<div style="text-align: center;">
-
-![Element](/icons/element.svg)
-<div>Element + Matrix + Synapse</div></div>
-
-{{< /split >}}
+###### 6. Automation
+- Single Bash script for full stack initialization
+- Automatic Synapse config generation
+- Automated admin user creation via `expect`
+- Docker Compose with dependency ordering and healthchecks
 
 ---
 
-#### Результаты
-✅ **Независимость:** полный контроль над данными и коммуникациями  
-✅ **Масштаб:** 100+ пользователей одновременно  
-✅ **Функциональность:** текст, голос, видео, файлы до 1.5GB, шифрование  
-✅ **Скорость:** развертывание за 5 минут одним скриптом  
-✅ **Надежность:** автоматические SSL сертификаты, healthchecks, auto-restart  
+#### Technologies
+<div class="row">
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/docker-original.svg" alt="Docker"><div>Docker</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/postgresql.svg" alt="PostgreSQL"><div>PostgreSQL</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/caddy.svg" alt="Caddy"><div>Caddy</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/bash.svg" alt="Bash"><div>Bash</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/linux-original.svg" alt="Linux"><div>Linux</div></div>
+<div class="col-4 col-lg-2 pt-2" style="text-align: center;"><img src="/icons/element.svg" alt="Element"><div>Element + Matrix + Synapse</div></div>
+</div>
 
 ---
 
-#### Архитектура
+#### Results
+✅ **Data ownership:** full control over messages and user data — no third-party servers  
+✅ **Scale:** 100+ concurrent users  
+✅ **Features:** text, voice, video, file sharing up to 1.5 GB, E2E encryption  
+✅ **Speed:** full deployment in 5 minutes with a single script  
+✅ **Reliability:** automatic SSL certificates, healthchecks, auto-restart  
+
+---
+
+#### Architecture
 {{< mermaid align="center" >}}
 graph TB
-    A[Пользователи] --> B[Caddy :443]
+    A[Users] --> B[Caddy :443]
     B --> C[Matrix Synapse :8008]
     B --> D[Element Web :80]
     B --> E[Synapse Admin :8888]
@@ -130,10 +99,10 @@ graph TB
 
 ---
 
-#### Длительность
-1 день (установка + настройка + тестирование)
+#### Duration
+1 day (installation + configuration + testing)
 
 ---
 
-#### Стоимость
-от 12 000 ₽
+#### Cost
+from $150
