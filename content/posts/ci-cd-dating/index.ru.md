@@ -7,7 +7,7 @@ menu:
   sidebar:
     name: "CI/CD Dating-сервис"
     identifier: cicd-dating-service
-    weight: 60
+    weight: 80
 ---
 
 ## Инфраструктура и CI/CD для продакшен запуска Dating-сервиса
