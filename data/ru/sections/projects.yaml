@@ -35,7 +35,7 @@ buttons:
 # your projects
 projects:
 - name: 🚀 CI/CD с GitLab + Kubernetes
-  url: "/ru/posts/ci-cd-gitlab/"
+  url: "/ru/posts/cicd/ci-cd-gitlab/"
   summary: |
     Настроил полный CI/CD пайплайн с GitLab CI, Docker и Kubernetes для стартапа
     
@@ -48,7 +48,7 @@ projects:
   tags: ["gitlab", "docker", "kubernetes", "fluxcd", "helm"]
 
 - name: ☁️ Миграция AWS → Yandex Cloud
-  url: "/ru/posts/cicd/ci-cd-gitlab/"
+  url: "/ru/posts/clouds/migration-from-aws/"
   summary: |
     Перенес инфраструктуру компании из AWS в Yandex Cloud в рамках импортозамещения
     
