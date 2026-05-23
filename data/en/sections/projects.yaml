@@ -29,7 +29,7 @@ buttons:
 
 projects:
 - name: 🚀 CI/CD with GitLab + Kubernetes
-  url: "/posts/ci-cd-gitlab/"
+  url: "/posts/cicd/ci-cd-gitlab/"
   summary: |
     Built a complete CI/CD pipeline with GitLab CI, Docker, and Kubernetes for a startup
     
@@ -42,7 +42,7 @@ projects:
   tags: ["gitlab", "docker", "kubernetes", "fluxcd", "helm"]
 
 - name: ☁️ AWS → Cost-Optimized Private Cloud
-  url: "/posts/migration-from-aws/"
+  url: "/posts/clouds/migration-from-aws/"
   summary: |
     Migrated full-stack company infrastructure from AWS to a cost-optimized cloud to eliminate vendor lock-in.
     
@@ -55,7 +55,7 @@ projects:
   tags: ["aws", "cloud", "terraform"]
 
 - name: 🕵🏻‍♂️ Prometheus + Grafana + Loki Monitoring
-  url: "/posts/monitoring-prometheus/"
+  url: "/posts/sre-observability/monitoring-prometheus/"
   summary: |
     Deployed an observability stack in a Kubernetes cluster.
     
@@ -68,7 +68,7 @@ projects:
   tags: ["kubernetes", "docker", "monitoring"]
 
 - name: 👩‍❤️‍💋‍👨 CI/CD for a Dating Service
-  url: "/posts/ci-cd-dating/"
+  url: "/posts/cicd/ci-cd-dating/"
   summary: |
     Built a complete DevOps stack for production launch of a Dating service (Nest.js + Angular)
     
