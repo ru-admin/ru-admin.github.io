@@ -6,3 +6,4 @@ node_modules/
 .DS_Store
 assets/jsconfig.json
 desktop.ini
+go.sum

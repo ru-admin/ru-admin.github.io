@@ -8,4 +8,4 @@ require github.com/hugo-toha/toha/v4 main // indirect
 
 // replace github.com/hugo-toha/toha/v4 => ../toha
 
-replace github.com/hugo-toha/toha/v4 => github.com/ru-admin/toha/v4 feat/projects-improvement
+// replace github.com/hugo-toha/toha/v4 => github.com/ru-admin/toha/v4 v4.0.0-20260518145651-9344814319fd
