@@ -2,7 +2,7 @@
 title: "Миграция и DevOps для маркетплейса на CS-Cart"
 description: "Перенос инфраструктуры в облако, переустановка CS-Cart Multi-Vendor, тема, аддоны, документация на вики, автоматизация на n8n"
 hero: "hero.webp"
-tags: ["cs-cart", "docker", "terraform", "yandex-cloud", "cloudflare", "n8n", "forgejo"]
+tags: ["cs-cart", "docker", "terraform", "yandex", "cloudflare", "n8n", "forgejo"]
 menu:
   sidebar:
     name: "DevOps для CS-Cart"
