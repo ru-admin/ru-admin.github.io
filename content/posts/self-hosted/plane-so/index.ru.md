@@ -2,7 +2,7 @@
 title: "Self-Hosted проект-менеджмент Plane.so"
 description: "Развёртывание open-source Plane.so CE в Coolify с кастомным Docker Compose, интеграцией Traefik и автоматическими бэкапами в AWS S3"
 hero: "hero.webp"
-tags: ["plane", "coolify", "docker", "traefik", "postgresql", "minio", "aws-s3"]
+tags: ["plane", "coolify", "docker", "traefik", "postgresql", "minio", "aws"]
 menu:
   sidebar:
     name: "Plane.so проект-менеджмент"
