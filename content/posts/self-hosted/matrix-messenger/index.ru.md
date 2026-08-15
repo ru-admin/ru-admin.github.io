@@ -8,7 +8,7 @@ menu:
     name: "Matrix мессенджер"
     identifier: matrix-messenger
     parent: self-hosted
-    weight: 10
+    weight: 30
 categories:
 - Self-Hosted
 ---

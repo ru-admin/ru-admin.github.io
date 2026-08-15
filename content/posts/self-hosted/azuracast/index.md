@@ -8,7 +8,7 @@ menu:
     name: "AzuraCast Internet Radio"
     identifier: azuracast
     parent: self-hosted
-    weight: 30
+    weight: 33
 categories:
 - Media Streaming
 ---

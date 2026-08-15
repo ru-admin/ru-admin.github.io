@@ -8,7 +8,7 @@ menu:
     name: "Blockchain nodes in K8s"
     identifier: blockchain-k8s-cluster
     parent: clouds
-    weight: 100
+    weight: 22
 categories:
 - Platform
 - Kubernetes

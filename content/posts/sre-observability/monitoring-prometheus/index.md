@@ -8,7 +8,7 @@ menu:
     name: "Prometheus monitoring"
     identifier: monitoring-prometheus-grafana
     parent: sre-observability
-    weight: 40
+    weight: 50
 categories:
 - SRE
 - Observability

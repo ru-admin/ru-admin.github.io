@@ -8,7 +8,7 @@ menu:
     name: ".NET Telemetry & Observability"
     identifier: dotnet-telemetry-observability
     parent: sre-observability
-    weight: 50
+    weight: 51
 categories:
 - SRE
 - Observability

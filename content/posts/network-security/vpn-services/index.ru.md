@@ -8,7 +8,7 @@ menu:
     name: "VPN WireGuard"
     identifier: vpn-wg
     parent: network-security
-    weight: 30
+    weight: 40
 categories:
 - Network Security
 ---

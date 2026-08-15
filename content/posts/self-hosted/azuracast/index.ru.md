@@ -8,7 +8,7 @@ menu:
     name: "Интернет-радио AzuraCast"
     identifier: azuracast
     parent: self-hosted
-    weight: 30
+    weight: 33
 categories:
 - Media Streaming
 ---

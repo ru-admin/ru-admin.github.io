@@ -8,7 +8,7 @@ menu:
     name: "Migration from AWS"
     identifier: migration-from-aws
     parent: clouds
-    weight: 10
+    weight: 20
 categories:
 - Cloud Migration
 ---

@@ -8,7 +8,7 @@ menu:
     name: "CI/CD Dating-сервис"
     identifier: cicd-dating-service
     parent: cicd
-    weight: 80
+    weight: 11
 categories:
 - CI/CD
 ---

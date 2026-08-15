@@ -8,7 +8,7 @@ menu:
     name: "Plane.so проект-менеджмент"
     identifier: plane-so
     parent: self-hosted
-    weight: 40
+    weight: 32
 categories:
 - Self-Hosted
 ---

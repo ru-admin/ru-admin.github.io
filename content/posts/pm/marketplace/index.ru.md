@@ -8,7 +8,7 @@ menu:
     name: "PM Маркетплейса"
     identifier: pm-marketplace
     parent: pm
-    weight: 10
+    weight: 60
 categories:
 - PM
 ---

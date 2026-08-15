@@ -8,7 +8,7 @@ menu:
     name: "DevOps for CS-Cart"
     identifier: cscart-devops
     parent: clouds
-    weight: 20
+    weight: 21
 categories:
 - E-commerce
 ---

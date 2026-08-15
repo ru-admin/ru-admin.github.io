@@ -8,7 +8,7 @@ menu:
     name: "Nextcloud хранилище"
     identifier: nextcloud
     parent: self-hosted
-    weight: 20
+    weight: 31
 categories:
 - Self-Hosted
 ---
