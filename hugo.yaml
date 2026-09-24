@@ -116,6 +116,11 @@ params:
       singlePage: false
       postCards: false
 
+    # Number of posts to show to each page. Default is "12"
+    pagination:
+      maxPostsPerPage: 5
+      lazyLoad: true
+
   footer:
     enable: true
     newsletter:
